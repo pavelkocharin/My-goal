@@ -1,0 +1,20 @@
+.intro {
+  background-color: rgba(119, 110, 110, 0.459);
+  margin: 130px auto 190px;
+  padding: 0;
+  max-width: 920px;
+  text-align: center;
+  color: #283416;
+
+  &__title {
+    margin: 0;
+    padding: 40px 40px 10px;
+    font-size: 2.5rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-bottom: 50px;
+    font-size: 1.5rem;
+  }
+}

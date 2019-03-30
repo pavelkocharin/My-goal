@@ -1,0 +1,37 @@
+.questions {
+  margin-bottom: 2.5rem;
+  padding-left: 60px;
+
+  &__title {
+    position: relative;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  &__title:before {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    margin-top: .65rem;
+    font-family: "FontAwesome";
+    content: '\f10c';
+    font-size: .7rem;
+    color: #c0c1c5;
+  }
+
+  &__answer {
+    position: relative;
+    margin-top: 0;
+    line-height: 1.5rem;
+  }
+
+  &__answer:before {
+    position: absolute;
+    left: -50px;
+    top: -7px;
+    content: url('../img/quotes.png');
+    width: 30px;
+    height: 30px;
+  }
+
+}

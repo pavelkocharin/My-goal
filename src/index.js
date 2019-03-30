@@ -1,0 +1,15 @@
+// JS - ./js/index.js
+import './js/'
+// SCSS
+import './scss/body-page.scss'
+import './scss/header.scss'
+import './scss/header-logo.scss'
+import './scss/header-nav.scss'
+import './scss/header-form.scss'
+import './scss/intro.scss'
+import './scss/main.scss'
+import './scss/about-site.scss'
+import './scss/about-author.scss'
+import './scss/news-block.scss'
+import './scss/questions.scss'
+import './css/fonts/font-awesome-4.7.0/css/font-awesome.min.css'

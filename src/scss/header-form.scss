@@ -1,0 +1,33 @@
+.header-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__btn {
+    -webkit-transition:all .25s linear;
+    transition:all .25s linear;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 25px;
+    background-color: transparent;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: serif;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__btn:first-child:hover {
+    border: 2px solid #fff;
+  }
+
+  &__btn:last-child {
+    border: 2px solid #fff;
+    margin: 0 0 0 20px;
+  }
+
+  &__btn:first-child:hover ~ &__btn:last-child {
+    border-color: transparent;
+  }
+}
