@@ -1,22 +1,28 @@
 .about-author {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 5rem;
+  margin-top: .75rem;
+  margin-bottom: 1.9rem;
 
   &__description {
-    padding-right: 50px;
-    width: 63%;
-    line-height: 1.5rem;
-    font-size: 1rem;
+    padding-top: 1.55rem;
+    line-height: 1.63rem;
+    font-family: 'FuturaPTBook';
+    font-size: 1.38rem;
+  }
+
+  &__text {
+    margin-top: .63rem;
+    margin-bottom: 0;
+  }
+
+  &__text:first-child {
+    margin-top: 1.38rem;    
   }
 
   &__img {
-    background-image: url("../img/bruce.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 390px;
-    height: 430px;
+    float: right;
+    padding: 0 0 50px 50px;
+    min-width: 300px;
+    min-height: 430px;
   }
 }
 
@@ -24,16 +30,17 @@
 
 @media (max-width: 767px) {
   .about-author {
-    flex-direction: column-reverse;
-    align-items: center;
 
     &__description {
-      padding-right: 0;
-      width: 90%;
+      clear: right;
     }
 
     &__img {
-      width: auto;
+      display: flex;
+      justify-content: center;
+      float: none;
+      margin: 0 auto;
+      padding: 0;
     }
   }
 }

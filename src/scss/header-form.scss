@@ -7,24 +7,24 @@
   &__btn {
     -webkit-transition:all .25s linear;
     transition:all .25s linear;
-    border: 2px solid rgba(0, 0, 0, 0);
-    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 20px;
     background-color: transparent;
-    padding: 10px 25px;
-    font-size: 1rem;
-    font-weight: 600;
-    font-family: serif;
+    padding: 9px 25px;
+    font-size: .95rem;
+    font-family: 'FuturaPTMedium';
+    font-weight: 400;
     color: #fff;
     cursor: pointer;
   }
 
   &__btn:first-child:hover {
-    border: 2px solid #fff;
+    border: 1px solid #fff;
   }
 
   &__btn:last-child {
-    border: 2px solid #fff;
-    margin: 0 0 0 20px;
+    border: 1px solid #fff;
+    margin: 0 0 0 2px;
   }
 
   &__btn:first-child:hover ~ &__btn:last-child {

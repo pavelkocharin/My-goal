@@ -1,20 +1,25 @@
 .intro {
-  background-color: rgba(119, 110, 110, 0.459);
-  margin: 130px auto 190px;
-  padding: 0;
-  max-width: 920px;
+  background-color: rgba(218, 232, 193, .7);
+  margin-bottom: 60px;
+  padding: 40px 46px 40px 44px;
+  max-width: 830px;
+  height: auto;
   text-align: center;
   color: #283416;
 
   &__title {
     margin: 0;
-    padding: 40px 40px 10px;
+    padding: 6px 0 4px 0;
+    line-height: 2.5rem;
     font-size: 2.5rem;
+    font-family: 'FuturaPTBold';
+    font-weight: 800;
   }
 
   &__subtitle {
     margin: 0;
-    padding-bottom: 50px;
+    padding: 0 0 9px 0;
+    font-family: 'FuturaPTBook';
     font-size: 1.5rem;
   }
 }

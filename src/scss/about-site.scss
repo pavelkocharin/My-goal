@@ -5,21 +5,30 @@
   &__section {
     display: flex;
     flex-direction: column;
+    padding-bottom: 25px;
+  }
+
+  &__section:last-child {
+    padding-bottom: 13px;
   }
 
   &__title {
-    margin: 30px 0 10px;
-    font-size: 1.3rem;
+    margin: 30px 0 6px;
+    font-size: 1.63rem;
+    font-family: 'FuturaPTHeavy';
   }
 
   &__text {
     margin: 0;
     padding: 5px 0;
-    font-size: 1rem;
+    line-height: 1.75rem;
+    font-family: 'FuturaPTBook';
+    font-size: 1.25rem;
   }
 
   &__list {
-    padding-left: 85px;
+    margin: .5rem 0 1.56rem;
+    padding-left: 4.74rem;
     list-style: none;
     counter-reset: li;
   }
@@ -27,14 +36,16 @@
   &__item {
     position: relative;
     display: block;
-    padding: 0 0 20px;
-    font-size: 1.05rem;
+    padding: 0 0 .75rem;
+    line-height: 1.63rem;
+    font-family: 'FuturaPTBook';
+    font-size: 1.38rem;
   }
 
   &__item:before {
     position: absolute;
-    left: -5em;
-    top: 0%;
+    left: -4.74rem;
+    top: 3px;
     display: inline-block;
     border: 2px solid #9b7f68;
     border-radius: 2.9rem;
@@ -46,36 +57,8 @@
     line-height: 2.9rem;
     color: #9b7f68;
     font-weight: bold;
+    font-size: 1.13rem;
     content: '0' counter(li);
     counter-increment: li;
   }
-
-  &__btn-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 30px;
-  }
-
-  &__btn-reg {
-    transition: ease .15s;
-    border: none;
-    border-radius: 25px;
-    background-color: #20b208;
-    padding: 15px 30px;
-    // font-family: "verdana";
-    color: #fff;
-    cursor: pointer;
-  }
-
-  &__btn-reg:hover {
-    background-color: #27d80c;
-    box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
-  }
-
-  &__btn-text {
-    padding-top: 10px;
-    font-size: .8rem;
-  }
 }
-
