@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: #fff;
   max-width: 1000px;
+  width: calc(100% - 30px);
   margin: 30px 15px 30px;
 
   &__item {
@@ -53,7 +54,7 @@
     margin-top: -4px;
     padding-left: 27px;
     max-width: 971px;
-    width: calc(100vw - 32px);
+    width: calc(100vw - 59px);
   }
 
   &__link {
@@ -72,5 +73,44 @@
   &__link-word {
     border-bottom: 1px solid #3b3d45;
     margin-right: 7px;
+  }
+}
+
+@media (max-width: 830px) {
+  .news-block {
+    margin: 16px 15px 38px;
+
+    &__item {
+      padding: 27px 20px;
+    }
+     
+    &__picture {
+      padding-right: 10px;
+      padding-bottom: 5px;
+      width: 110px;
+      height: 82px;
+    }
+
+    &__item-title {
+      margin-top: -4px;
+      margin-bottom: .7rem;
+      line-height: 1.38rem;
+      font-size: 1.125rem;
+    }
+
+    &__item-text {
+      margin: 0;
+      line-height: 1.31rem;
+      font-size: 1rem;
+    }
+
+    &__link {
+      transition: ease .15s;
+      margin: 0 auto 28px;
+      text-decoration: none;
+      font-family: 'FuturaPTBook';
+      font-size: 1.25rem;
+      color: #3b3d45;
+    }
   }
 }

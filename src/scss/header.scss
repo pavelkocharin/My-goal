@@ -58,3 +58,17 @@
     height: 530px;
   }
 }
+
+@media (max-width: 830px) {
+
+  .header {
+    &__top {
+      height: 50px;;
+    }
+
+    &__bottom {
+      height: auto;
+    }
+  }
+  
+}

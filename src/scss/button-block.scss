@@ -32,3 +32,9 @@
 .button-block--main-questions {
   margin-bottom: 1.1rem;
 }
+
+@media (max-width: 830px) {
+  .button-block {
+    padding: 0 0 8px;
+  }
+}

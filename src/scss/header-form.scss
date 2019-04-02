@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+  padding-left: 25px;
 
   &__btn {
     -webkit-transition:all .25s linear;
@@ -29,5 +30,11 @@
 
   &__btn:first-child:hover ~ &__btn:last-child {
     border-color: transparent;
+  }
+}
+
+@media (max-width: 830px) {
+  .header-form {
+    display: none;
   }
 }

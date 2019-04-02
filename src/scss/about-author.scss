@@ -26,13 +26,16 @@
   }
 }
 
-
-
-@media (max-width: 767px) {
+@media (max-width: 830px) {
   .about-author {
+    margin-top: 1rem;
+    margin-bottom: 2.26rem;
 
     &__description {
       clear: right;
+      padding-top: .8rem;
+      line-height: 1.45rem;
+      font-size: 1rem;
     }
 
     &__img {
@@ -42,5 +45,15 @@
       margin: 0 auto;
       padding: 0;
     }
+  }
+}
+
+//забота об айфонах и прочих на 320
+@media (max-width: 330px) {
+  .about-author__img {
+    min-width: 290px;
+    width: 290px;
+    min-height: 387px;
+    height: 387px;
   }
 }

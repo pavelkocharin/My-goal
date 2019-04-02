@@ -62,3 +62,44 @@
     counter-increment: li;
   }
 }
+
+@media (max-width: 830px) {
+  .about-site {
+
+    &__section {
+      padding-bottom: 5px;
+    }
+
+    &__title {
+      margin-top: 1rem;
+      margin-bottom: 0;
+      line-height: 2.5rem;
+      font-size: 1.13rem;
+    }
+
+    &__text {
+      line-height: 1.46rem;
+      font-size: 1rem;
+    }
+
+    &__list {
+      margin: 0 0 1rem;
+      padding-left: 4rem;
+    }
+
+    &__item {
+      line-height: 1.44rem;
+      font-size: 1rem;
+    }  
+
+    &__item:before {
+      left: -4rem;
+      top: 6px;
+      border-radius: 2.25rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      font-size: .9rem;
+    }
+  }
+}

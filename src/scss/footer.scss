@@ -102,6 +102,7 @@
   &__payments {
     display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: center;
     width: 64%;
   }
@@ -117,19 +118,21 @@
 }  
  
 @media (max-width: 1060px) { 
-  .footer__content {
-    max-width: 100%;
-  } 
+  .footer {
+
+    &__content {
+      max-width: 100%;
+    } 
   
-  .footer__bottom {
-    max-width: 100%;
-    flex-direction: column-reverse;
-    padding: 50px 0;
-    justify-content: justify;
-    align-items: center;
+    &__bottom {
+      max-width: 100%;
+      flex-direction: column-reverse;
+      padding: 50px 0;
+      justify-content: justify;
+      align-items: center;
+    }
 
     &__payments {
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       width: 100vw;
@@ -161,9 +164,78 @@
   }
 }
 
+@media (max-width: 830px)  {
+  .footer {
+
+    &__logo {
+      padding: 1.58rem 0 1.15rem;
+    }
+
+    &__content-item {
+      padding: 5px 40px 7px;
+    }
+
+    &__content-text--tel::before {
+      left: -.4rem;
+    }
+  
+    &__content-text--mail::before {
+      left: -.4rem;
+    }
+
+    &__content-link {
+      padding-bottom: 8px;
+      font-size: .94rem;
+    }
+
+    &__bottom {
+      padding: 15px 0 33px;
+    }
+
+    &__content-link--mobile {
+      padding: 6px 0 2px
+    }
+    
+    &__payments {
+      width: 95%;
+    }
+  
+    &__payments-link {
+      margin: 0 12px;
+      padding-bottom: 33px;
+    }
+
+    &__payments-link:first-child {
+      margin-left: 5px;
+    }
+
+    &__payments-link:last-child {
+      margin-right: 5px;
+    }
+  
+    &__payments-icon {
+      width: 100%;
+    }
+  }
+}
+
 //убираем отдаление от правой границы до сюлижения с границей
 @media (min-width: 768px) {
   .footer__payments-link:last-child {
     margin-right: 0;
+  }
+}
+
+//выравнивание по центру с учётом псевдоэлементов
+@media (max-width: 680px) {
+  .footer__content-item--contact {
+    margin-left: 30px;
+  }
+}
+
+//защита от переноса слов в меню футера на малых телефонах
+@media (max-width: 340px) {
+  .footer__content-item--mobile {
+    padding: 5px 0px;
   }
 }
