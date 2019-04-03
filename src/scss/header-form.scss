@@ -1,12 +1,10 @@
 .header-form {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   padding-left: 25px;
 
   &__btn {
-    -webkit-transition:all .25s linear;
     transition:all .25s linear;
     border: 1px solid rgba(0, 0, 0, 0);
     border-radius: 20px;
@@ -14,7 +12,6 @@
     padding: 9px 25px;
     font-size: .95rem;
     font-family: 'FuturaPTMedium';
-    font-weight: 400;
     color: #fff;
     cursor: pointer;
   }
@@ -36,5 +33,39 @@
 @media (max-width: 830px) {
   .header-form {
     display: none;
+
+    &--active {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__btn {
+      transition: none;
+      border: none;
+      border-radius: 20px;
+      padding: 9px 25px;
+      line-height: 3.13rem;
+      font-size: 1.38rem;
+    }
+  
+    &__btn:first-child {
+      padding: 0;
+    }
+  
+    &__btn:last-child {
+      border: 1px solid #fff;
+      margin-top: 22px;
+      padding: 5px 25px;
+      line-height: 28px;
+      font-size: .95rem;
+    }
+  
+    &__btn:first-child:hover ~ &__btn:last-child {
+      border-color: #fff;
+    }
   }
 }

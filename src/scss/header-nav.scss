@@ -3,9 +3,20 @@
 
   &__mobile-btn {
     display: none;
-    color: #fff;
-    padding: 5px;
-    cursor: pointer;
+    position: relative; 
+    width: 1.5rem; 
+    height: 1rem;
+    border-top: 0.25rem solid #fff; 
+    border-bottom: 0.25rem solid #fff;
+  }
+
+  &__mobile-btn:before { 
+    content: ""; 
+    position: absolute; 
+    top: .35rem; 
+    left: 0; 
+    width: 100%; 
+    border-top: 0.25rem solid #fff; 
   }
 
   &__list {
@@ -29,7 +40,6 @@
     position: absolute;
     bottom: -5px;
     left: 0;
-    -webkit-transition:all .33s linear;
     transition:all .33s linear;
     width: 63px;
     height: 2px;
@@ -37,24 +47,20 @@
   }
 
   .header-nav__item--goal:hover ~ &__line {
-    -webkit-transform:translate(112px);
     transform:translate(112px);
     transition:all .33s linear;
-    -webkit-transition:all .33s linear;
     width: 85px;
   }
 
   .header-nav__item--contacts:hover ~ &__line {
-    -webkit-transform:translate(248px);
     transform:translate(248px);
-    -webkit-transition:all .33s linear;
     transition:all .33s linear;
     width: 73px;
   }
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 830px) {
   .header-nav {
 
     &__mobile-btn {
@@ -63,15 +69,56 @@
 
     &__list {
       display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
     }
 
     &__list--active {
-      display: block;
+      position: relative;
+      display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0;
+      width: inherit;
+      min-width: 300px;
+      list-style: none;
+    }
+
+    &__link {
+      margin: 0;
+      padding: 0;
+      line-height: 3.13rem;
+      font-family: 'FuturaPTMedium';
+      font-size: 1.38rem;
+    }
+
+    &__item {
+      margin: 0;
+      padding: 0;
+    }
+    
+    &__line {
+      position: absolute;
+      top: 38px;
+      left: 105px;
+      transition:all .33s linear;
+      width: 90px;
+      height: 2px;
+      background: #fff;
+    }
+  
+    .header-nav__item--goal:hover ~ &__line {
+      left: 90px;
+      transform:translateY(50px);
+      transition:all .33s linear;
+      width: 122px;
+    }
+  
+    .header-nav__item--contacts:hover ~ &__line {
+      left: 98px;
+      transform:translateY(100px);
+      transition:all .33s linear;
+      width: 106px;
     }
   }
 }

@@ -7,9 +7,8 @@
   margin: 30px 15px 30px;
 
   &__item {
-    border-bottom: 1px solid #e1e1e1;
-    border-left: 1px solid #e1e1e1;
-    border-right: 1px solid #e1e1e1;
+    border: 1px solid #e1e1e1;
+    border-top: none;
     padding: 29px 30px;
   }
 
@@ -36,6 +35,7 @@
   &__item-title {
     margin-top: 2px;
     margin-bottom: .5rem;
+    text-transform: uppercase;
     font-family: 'FuturaPTBold';
     font-size: 1.25rem;
     color: #575757;

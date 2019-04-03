@@ -31,7 +31,7 @@ module.exports = {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: 'assets/img/index/[name].[ext]'
       }
     }, {
       test: /\.scss$/,
@@ -67,7 +67,8 @@ module.exports = {
       use: {
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name][hash].[ext]'
+          name: 'assets/fonts/[name][hash].[ext]',
+           publicPath: '../../'
         }
       }
     }]
