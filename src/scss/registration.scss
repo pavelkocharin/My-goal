@@ -1,0 +1,139 @@
+.registration {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    margin-top: 70px;
+    line-height: 40px;
+    font-family: 'FuturaPTBold';
+    font-size: 40px;
+    color: #82848c;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__input {
+    border-radius: 10px;
+    border: 1px solid #e6e6e6;
+    background-color: #f5f5f5;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    width: 300px;
+    height: 50px;
+  }
+
+  &__input::placeholder {
+    padding-left: 0;
+    font-family: 'FuturaPTBook';
+    font-size: 18px;
+    color: #a6a6a6;
+  }
+
+  &__button {
+    background-color: #20b208;
+    border: none;
+    border-radius: 25px;
+    margin-top: 5px;
+    width: 160px;
+    height: 50px;
+    font-family: 'FuturaPTDemi';
+    font-size: 15px;
+    color: #fff;
+  }
+
+  &__button:hover {
+    box-shadow: 0 0 5px #20b208;
+    background-color: #2dbd17;
+  }
+
+  
+  &__close-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: -25px;
+    right: -25px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  &__close-btn:before,
+  &__close-btn:after {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #fff;
+    width: 14px;
+    height: 2px;
+    content: "";
+  }
+
+  &__close-btn:before {
+    transform: rotate(45deg);
+  }
+
+  &__close-btn:after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 830px) {
+  .registration {
+    width: 470px;
+    height: 370px;
+    top: calc(50%-185px);
+    left: calc(50%-235px);
+  
+    &__title {
+      margin-top: 35px;
+      font-size: 24px;
+    }
+    
+    &__input {
+      height: 46px;
+    }
+    
+    &__button {
+      margin-top: 11px;
+    }
+      
+    &__close-btn {
+      top: 15px;
+      right: 15px;
+      width: 22px;
+      height: 22px;
+    }
+  
+    &__close-btn:before,
+    &__close-btn:after {
+      top: 10px;
+      left: 0;
+      background: #979797;
+      width: 18px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .registration {
+    width: 90vw;
+    top: calc(50%-185px);
+    left: calc(50% - 90vw * .5);
+      
+    &__input {
+      width: 68vw;
+    }
+  }
+}

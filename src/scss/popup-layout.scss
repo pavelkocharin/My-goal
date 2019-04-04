@@ -1,0 +1,125 @@
+.popup-layout {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  background: rgba(13, 13, 13, .9);
+  width: 100%;
+  height: 100%;
+
+  &--active {
+    display: block;
+  }
+
+  &__popup-menu {
+    position: absolute;
+    top: 0;
+    left: calc(50%-150px);
+    display: flex;
+    flex-direction: column;
+    margin-top: 47px;
+    background: transparent;
+    width: 300px;
+    height: 250px;
+  }
+
+  &__popup-menu-close {
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: 14px;
+    right: 17px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+
+  &__popup-menu-close--unactive {
+    display: none;
+  }
+
+  &__popup-menu-close:before,
+  &__popup-menu-close:after {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    background: #fff;
+    width: 22px;
+    height: 4px;
+    content: "";
+  }
+
+  &__popup-menu-close:before {
+    transform: rotate(45deg);
+  }
+
+  &__popup-menu-close:after {
+    transform: rotate(-45deg);
+  }
+
+  &__registration-field {
+    position: absolute;
+    top: calc(50%-220px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 440px;
+  }
+
+  &__registration-field--active {
+    display: block;
+  }
+
+  &__entry-field {
+    position: absolute;
+    top: calc(50%-210px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 420px;
+  }
+
+  &__entry-field--active {
+    display: block;
+  }
+
+  &__recovery-field {
+    position: absolute;
+    top: calc(50%-185px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 370px;
+  }
+
+  &__recovery-field--active {
+    display: block;
+  }
+
+  &__message-pass-field {
+    position: absolute;
+    top: calc(50%-120px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 240px;
+  }
+
+  &__message-pass-field--active {
+    display: block;
+  }
+
+  &__success-field {
+    position: absolute;
+    top: calc(50%-150px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 300px;
+  }
+
+  &__success-field--active {
+    display: block;
+  }
+}
