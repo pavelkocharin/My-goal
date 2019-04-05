@@ -10,7 +10,9 @@
 
   &__text {
     margin-top: 79px;
-    line-height: 28px;
+    padding: 0 20px;
+    line-height: 20px;
+    text-align: center;
     font-family: 'FuturaPTBook';
     font-size: 20px;
     color: #737373;
@@ -102,9 +104,5 @@
     width: 90vw;
     top: calc(50%-95px);
     left: calc(50% - 90vw * .5);
-      
-    &__input {
-      width: 68vw;
-    }
   }
 }

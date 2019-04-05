@@ -50,16 +50,19 @@ window.onload = function() {
   var registrationBtn = document.querySelector(".header-form__btn--reg");
   var registrationField = document.querySelector(".popup-layout__registration-field");
 
-  registrationBtn.onclick = function() {
+  //проверка на выполненный вход
+  if (registrationBtn) {
+
+    registrationBtn.onclick = function() {
     if (popup.classList.contains("popup-layout--active") == false) {
       popup.classList.add("popup-layout--active");
       closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
       registrationField.classList.add("popup-layout__registration-field--active");
-    } else if (popup.classList.contains("popup-layout--active")) {
-      registrationField.classList.add("popup-layout__registration-field--active");
-      closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
-      menuMobileGroup.removeChild(menu);
-      menuMobileGroup.removeChild(entryForm);
+      } else if (popup.classList.contains("popup-layout--active")) {
+        registrationField.classList.add("popup-layout__registration-field--active");
+        closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
+        menuMobileGroup.removeChild(menu);
+        menuMobileGroup.removeChild(entryForm);
 
       window.onresize = function() {
         if (registrationField.classList.contains("popup-layout__registration-field--active") && document.body.clientWidth > 830) {
@@ -68,19 +71,21 @@ window.onload = function() {
           popup.classList.add("popup-layout--active");
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
+          }
         }
+      } else {
+        return null;
       }
+    }
 
-    } else {
-      return null;
+    closeModalBtn.onclick = function() {
+      popup.classList.remove("popup-layout--active");
+      closeMobileMenu.classList.remove("popup-layout__popup-menu-close--unactive");
+      registrationField.classList.remove("popup-layout__registration-field--active");
     }
   }
 
-  closeModalBtn.onclick = function() {
-    popup.classList.remove("popup-layout--active");
-    closeMobileMenu.classList.remove("popup-layout__popup-menu-close--unactive");
-    registrationField.classList.remove("popup-layout__registration-field--active");
-  }
+  
 
   //Сообщение об успешной регистрации
   var closeModalBtnSuccess = document.querySelector(".success__close-btn");
@@ -108,36 +113,39 @@ window.onload = function() {
   var entryBtn = document.querySelector(".header-form__btn--entry");
   var entryField = document.querySelector(".popup-layout__entry-field");
 
-  entryBtn.onclick = function() {
-    if (popup.classList.contains("popup-layout--active") == false) {
-      popup.classList.add("popup-layout--active");
-      closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
-      entryField.classList.add("popup-layout__entry-field--active");
-    } else if (popup.classList.contains("popup-layout--active")) {
-      entryField.classList.add("popup-layout__entry-field--active");
-      closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
-      menuMobileGroup.removeChild(menu);
-      menuMobileGroup.removeChild(entryForm);
+  //проверка на выполненный вход
+  if (entryBtn) {
+    entryBtn.onclick = function() {
+      if (popup.classList.contains("popup-layout--active") == false) {
+        popup.classList.add("popup-layout--active");
+        closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
+        entryField.classList.add("popup-layout__entry-field--active");
+      } else if (popup.classList.contains("popup-layout--active")) {
+        entryField.classList.add("popup-layout__entry-field--active");
+        closeMobileMenu.classList.add("popup-layout__popup-menu-close--unactive");
+        menuMobileGroup.removeChild(menu);
+        menuMobileGroup.removeChild(entryForm);
 
-      window.onresize = function() {
-        if (entryField.classList.contains("popup-layout__entry-field--active") && document.body.clientWidth > 830) {
-          menu.classList.remove("header-nav__list--active");
-          entryForm.classList.remove("header-form--active");
-          popup.classList.add("popup-layout--active");
-          headerNav.appendChild(menu);
-          headerTop.appendChild(entryForm);
+        window.onresize = function() {
+          if (entryField.classList.contains("popup-layout__entry-field--active") && document.body.clientWidth > 830) {
+            menu.classList.remove("header-nav__list--active");
+            entryForm.classList.remove("header-form--active");
+            popup.classList.add("popup-layout--active");
+            headerNav.appendChild(menu);
+            headerTop.appendChild(entryForm);
+          }
         }
+
+      } else {
+        return null;
       }
-
-    } else {
-      return null;
     }
-  }
 
-  closeModalBtnEntry.onclick = function() {
-    popup.classList.remove("popup-layout--active");
-    closeMobileMenu.classList.remove("popup-layout__popup-menu-close--unactive");
-    entryField.classList.remove("popup-layout__entry-field--active");
+    closeModalBtnEntry.onclick = function() {
+      popup.classList.remove("popup-layout--active");
+      closeMobileMenu.classList.remove("popup-layout__popup-menu-close--unactive");
+      entryField.classList.remove("popup-layout__entry-field--active");
+    }
   }
 
 //восстановление пароля (кнопка Забыли пароль)
@@ -179,5 +187,25 @@ window.onload = function() {
     location.href="index.html";
   }
 
+
+
+  //переход по кнопке "Стать участником" на страницу Цели
+  var goalsLinks = document.querySelectorAll(".button-block__reg");
+
+  for (var i=0; i < goalsLinks.length; i++) {
+    goalsLinks[i].onclick = function() {
+      location.href="goals.html";
+      console.log("sf")
+    }
+  }
+
+  //переход по кнопке "Профиль" на страницу личного кабинета
+  var profileLink = document.querySelector(".header-form__btn--profile");
+
+  if (profileLink) {
+    profileLink.onclick = function() {
+      location.href="profile.html";
+    }
+  }
 
 }
