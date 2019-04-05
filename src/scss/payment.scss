@@ -1,0 +1,93 @@
+.payment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0 15px;
+  max-width: 1000px;
+
+  &__text {
+    margin-top: 10px;
+    line-height: 1.75rem;
+    font-family: 'FuturaPTBook';
+    font-size: 1.25rem;
+    color: #737373;
+  }
+
+  &__button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__link {
+    position: relative;
+    transition: ease .15s;
+    border: 2px solid #e6e6e6;
+    border-radius: 25px;
+    padding: 13px 0 13px 30px;
+    width: 275px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-family: 'FuturaPTDemi';
+    font-size: .95rem;
+    color: #737373;
+  }
+
+  &__link--ya {
+    margin-right: 20px;
+  }
+
+  &__link--ya:before {
+    position: absolute;
+    top: 8px;
+    right: 35px;
+    background-image: url('../img/index/yandexkassa-color.png');
+    background-repeat: no-repeat;
+    width: 109px;
+    height: 30px;
+    content: '';
+  }
+
+  &__link--robo:before {
+    position: absolute;
+    top: 16px;
+    right: 27px;
+    background-image: url('../img/index/robokassa-color.png');
+    background-repeat: no-repeat;
+    width: 115px;
+    height: 30px;
+    content: '';
+  }
+
+  &__link:hover {
+    background-color: #27d80c;
+    box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
+    border-color: #27d80c;
+    color: #fff;
+  }
+}
+
+@media (max-width: 830px) {
+  .payment {
+    max-width: 830px;
+  
+    &__text {
+      margin-top: 0;
+      line-height: 1.45rem;
+      font-size: 1rem;
+    }
+  
+    &__button-group {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+    
+    &__link--ya {
+      margin: 0 0 10px 0;
+    }
+  }
+}

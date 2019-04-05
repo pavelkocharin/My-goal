@@ -137,6 +137,16 @@ module.exports = {
       template: `${PATHS.src}/profile.html`,
       filename: './profile.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/privacy-policy.html`,
+      filename: './privacy-policy.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/payment.html`,
+      filename: './payment.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
