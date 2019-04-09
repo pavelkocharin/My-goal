@@ -1,0 +1,63 @@
+.goals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 1030px;
+
+  &__title {
+    margin: 26px 0 0;
+    font-family: 'FuturaPTBold';
+    font-size: 32px;
+    color: #82848c;
+  }
+
+  &__subtitle {
+    margin: 0 0 28px;
+    line-height: 26px;
+    font-family: 'FuturaPTBook';
+    font-size: 20px;
+    color: #74798c;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  &__day-block {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 830px) {
+  .goals {
+    &__title {
+      margin-top: 17px;
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      margin: 4px 0 14px;
+      padding: 0 30px;
+      text-align: center;
+      line-height: 19px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+
+
+
+
+

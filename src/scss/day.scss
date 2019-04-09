@@ -1,0 +1,919 @@
+.day {
+  display: flex;
+  width: 100%;
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 8px 0;
+    margin: 0 auto;
+    width: 16.7%;
+    color: #82848c;
+  }
+
+  &__date-title {
+    font-size: 17px;
+    font-family: 'FuturaPTMedium';
+  }
+
+  &__date-number {
+    font-size: 24px;
+    font-family: 'FuturaPTHeavy';
+  }
+
+  &__week-day {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'FuturaPTBook';
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 83.3%;
+  }
+
+  &__table {
+    display: flex;
+    border: 2px solid #dd7fb0;
+  }
+
+  &__table-column {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 15px 13px;
+  }
+
+  &__table-column--future {
+    padding-bottom: 10px;
+  }
+
+  &__table-column:nth-child(2) {
+    border-left: 2px solid #dd7fb0;
+    border-right: 2px solid #dd7fb0;
+  }
+
+  &__table-column:nth-child(4) {
+    border-left: 2px solid #dd7fb0;
+  }
+
+  &__table-column-title {
+    margin: 0 0 11px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'FuturaPTDemi';
+    color: #dd7fb0;
+  }
+
+  &__table-column-title--success {
+    color: #20b208;
+  }
+
+  &__table-column-title--empty {
+    visibility: hidden;
+  }
+
+  &__about-goal-short {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+    color: #dd7fb0;
+  }
+
+  &__about-goal-short--success {
+    color: #20b208;
+  }
+
+  &__goal-status-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__goal-status-number {
+    margin: 0;
+  }
+
+  &__goal-description {
+    margin: 2px 0 1px;
+    line-height: 1rem;
+  }
+
+  &__goal-result-empty-block {
+    width: 100%;
+    height: 44px;
+  }
+
+  &__goal-result-short {
+    margin: 3px 0 2px;
+    text-align: center;
+    line-height: 1rem;
+    font-family: 'FuturaPTBook';
+    font-size: 15px;
+  }
+
+  &__goal-result-short--open {
+    margin-bottom: 84px;
+  }
+
+  &__goal-result-short--success {
+    color: #20b208;
+  }
+
+  &__goal-result-short--red {
+    color: #dd7fb0;
+  }
+
+  &__goal-result-short--future {
+    margin: -6px auto 5px;
+  }
+
+  &__goal-result-show {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    text-decoration: underline;
+    font-size: 15px;
+    font-family: 'FuturaPTBook';
+    color: #20b208;
+    cursor: pointer;
+  }
+
+  &__goal-result-show:hover {
+    text-decoration: none;
+  }
+
+  &__goal-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__goal-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__goal-item-title {
+    margin: 12px 0 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 18px;
+  }
+
+  &__goal-item-label {
+    display: block;
+    position: relative;
+    user-select: none;
+    margin-bottom: 10px;
+    width: 80%;
+    line-height: 20px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+    cursor: pointer;
+  }
+
+  &__goal-item-label:hover &__goal-item-checkbox ~ &__goal-item-checkmark {
+    background-color: #ccc;
+  }
+
+  &__goal-item-checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+  }
+
+  &__goal-item-checkmark {
+    position: absolute;
+    top: 5px;
+    right: -35px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 14px;
+    width: 14px;
+  }
+
+  &__goal-item-checkmark:after {
+    position: absolute;
+    display: none;
+    content: "";
+  }
+
+  &__goal-item-checkbox:checked ~ &__goal-item-checkmark:after {
+    display: block;
+  }
+
+  &__goal-item-checkmark:after {
+    left: 4px;
+    top: 0px;
+    border: solid #20b208;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    width: 5px;
+    height: 8px;
+  }
+
+  &__day-score,
+  &__total-score,
+  &__range-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__day-score-title,
+  &__total-score-title,
+  &__range-title {
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 15px;
+  }
+
+  &__day-score-sum,
+  &__total-score-sum,
+  &__range-score-sum {
+    margin: 2px 0 1px;
+    text-align: center;
+    line-height: 27px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: #20b208;
+  }
+
+  &__day-score-text,
+  &__total-score-text,
+  &__range-score-text {
+    margin: 13px 0 21px;
+    line-height: 19px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+  }
+
+  &__part-result {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 5px;
+  }
+
+  &__part-result-text {
+    width: 70%;
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 15px;
+  }
+
+  &__part-result-line {
+    width: 1px;
+    height: 100%;
+    border-right: 1px solid #e0e0e0;
+  }
+
+  &__part-result-score {
+    margin: 2px 10px 1px 0; 
+    text-align: center;
+    line-height: 27px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: #20b208;
+  }
+
+  &__part-result-text--left {
+    text-align: left;
+  }
+ 
+  //раздел под таблицей
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid #dd7fb0;
+    border-top: none;
+    padding: 0 50px;
+  }
+
+  &__info-title {
+    margin: 21px 0 13px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: #82848C;
+  }
+
+  &__info-text {
+    margin: 0;
+    line-height: 24px;
+    font-family: 'FuturaPTBook';
+    font-size: 18px;
+    color: #737373;
+  }
+
+  &__info-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0 -3px 0;
+  }
+
+  &__info-checkbox-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__info-checkbox-label {
+    display: block;
+    position: relative;
+    user-select: none;
+    margin: 0 0 12px 40px;
+    width: 27%;
+    line-height: 20px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+    cursor: pointer;
+  }
+
+  &__info-checkbox-label:hover &__info-item-checkbox ~ &__info-item-checkmark {
+    background-color: #ccc;
+  }
+
+  &__info-item-checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+  }
+
+  &__info-item-checkmark {
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 14px;
+    width: 14px;
+  }
+
+  &__info-item-checkmark:after {
+    position: absolute;
+    display: none;
+    content: "";
+  }
+
+  &__info-item-checkbox:checked ~ &__info-item-checkmark:after {
+    display: block;
+  }
+
+  &__info-item-checkmark:after {
+    left: 4px;
+    top: 0px;
+    border: solid #20b208;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    width: 5px;
+    height: 8px;
+  }
+
+  //ползунок range
+  &__info-range-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1;
+    background-color: transparent;
+    margin: 34px auto 9px;
+    width: 470px;
+    height: 32px;
+  }
+
+  &__info-range-list {
+    position: relative;
+    display: flex;
+    font-display: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    background-color: transparent;
+    margin: 0 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__info-range-item {
+    padding: 13px 10px;
+    font-family: 'FuturaPTDemi';
+    font-size: 14px;
+    color: #82848c;
+    cursor: pointer;
+  }
+
+  &__info-range-item--active {
+    box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1, 0px 0px 14px 0px rgba(0, 0, 0, .25) inset;
+    background: linear-gradient(150deg, #88b415 0%, #9bbc40 53%, #80ae18 56%);
+    color: #fff;
+  }
+
+  &__info-range-btn {
+    background-color: #82848c;
+    border:none;
+    border-radius: 8px;
+    margin: 5px 8px;
+    padding: 0;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  //textarea
+  &__info-textarea {
+    border: 3px solid #e6e6e6;
+    outline: none;
+    background: transparent;
+    margin: 27px 0 20px;
+    padding: 5px 15px 15px;
+    width: calc(100% -30px);
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+  }
+
+  &__info-btn-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__info-save-day-btn {
+    transition: ease .15s;
+    border: none;
+    border-radius: 30px;
+    background-color: #20b208;
+    margin-bottom: 5px;
+    width: 12.5rem;
+    height: 3.7rem;
+    text-transform: uppercase;
+    font-family: 'FuturaPTDemi';
+    font-size: .95rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__info-save-day-btn:hover {
+    background-color: #27d80c;
+    box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
+  }
+
+  &__info-save-day-btn--saved {
+    background-color: #f2f2f2;
+    color: #82848c;
+  }
+
+  &__info-save-day-btn--saved:hover {
+    background-color: #f2f2f2;
+    box-shadow: none;
+  }
+
+  &__info-btn-span {
+    margin-bottom: 15px;
+    font-family: 'FuturaPTBook';
+    font-size: 18px;
+    color: #737373;
+  }
+
+  &__info-edit-day-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    text-decoration: underline;
+    font-size: 18px;
+    font-family: 'FuturaPTMedium';
+    color: #82848c;
+    cursor: pointer;
+  }
+
+  &__info-edit-day-btn:hover {
+    text-decoration: none;
+  }
+
+  &__promo  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px dashed #82848c;
+    background: #f2f2f2;
+    width: 100%;
+  }
+
+  &__promo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__promo-title {
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: 'FuturaPTBook';
+    color: #82848c;
+  }
+
+  &__promo-number {
+    background: #e4e4e4;
+    padding: 5px 15px;
+    font-size: 26px;
+    font-family: 'FuturaPTHeavy';
+    color: #82848c;
+  }
+
+  &__promo-text {
+    margin: 7px 15px 17px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'FuturaPTBook';
+    color: #737373;
+  }
+
+  &__close-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 8px auto 13px;
+    text-decoration: underline;
+    font-size: 16px;
+    font-family: 'FuturaPTBook';
+    color: #82848c;
+    cursor: pointer;
+  }
+
+  &__close-btn:hover {
+    text-decoration: none;
+  }
+
+  &__goal-result-select-goals {
+    transition: ease .15s;
+    border: none;
+    border-radius: 30px;
+    background-color: #20b208;
+    margin: 3px auto 0;
+    width: 125px;
+    height: 28px;
+    text-transform: uppercase;
+    font-family: 'FuturaPTBook';
+    font-size: .7rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__goal-result-select-goals:hover {
+    background-color: #27d80c;
+    box-shadow: 0 0 4px rgba(59, 224, 112, 0.9);
+  }
+
+  &__results-mobile {
+    display: none;
+  }
+}
+
+//брейкпоинт, с которого начинается слом таблицы
+@media (max-width: 950px) {
+  .day {
+    flex-direction: column;
+
+    &__results-mobile {
+      display: block;
+    }
+
+    &__date {
+      flex-direction: row;
+      padding: 5px 15px;
+      width: calc(100%-30px);
+    }
+
+    &__date-title {
+      margin-left: 5px;
+    }
+
+    &__date-number {
+      padding: 0 5px;
+    }
+
+    &__section {
+      width: 100%;
+    }
+
+    &__table {
+      flex-direction: column;
+      border: 2px solid #dd7fb0;
+      width: calc(100%-4px);
+    }
+
+    &__table-column {
+      padding: 8px 15px;
+      width: calc(100%-30px);
+      border-top: 2px solid #dd7fb0;
+      border-left: none;
+      border-right: none;
+    }
+
+    &__table-column:first-child {
+      border-top: none;
+    }
+
+    &__table-column:nth-child(2) {
+      border-left: none;
+      border-right: none;
+    }
+  
+    &__table-column:nth-child(4) {
+      border-left: none;
+    }
+
+    &__table-column-title {
+      margin-bottom: 7px;
+    }
+
+    &__table-column--mobile {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__table-column--mobile-display-none {
+      display: none;
+    }
+
+    &__goal-status-block {
+      justify-content: flex-start;
+    }
+
+    &__goal-list {
+      margin-top: 10px;
+    }
+
+    &__goal-status-number {
+      padding-right: 5px;
+    }
+
+    &__goal-status {
+      padding: 0 5px;
+    }
+
+    &__goal-item-title {
+      margin: 5px 0 12px;
+      text-align: left;
+    }
+
+    &__goal-item-label {
+      width: 93%;
+    }
+
+    &__goal-item-checkmark {
+      top: 0;
+      right: -25px;
+    }
+
+    &__part-result-text--left {
+      width: auto;
+    }
+
+    &__info-title {
+      margin-bottom: 4px;
+    }
+
+    &__info-text {
+      width: 100%;
+      line-height: 20px;
+      font-size: 16px;
+    }
+
+    &__info-list {
+      width: 100%;
+    }
+
+    &__info {
+      padding: 0 15px;
+      width: calc(100%-34px);
+    }
+
+    &__info-form {
+      width: 100%;
+    }
+
+    &__info-checkbox-area {
+      margin: 22px 0 -6px;
+    }
+
+    &__info-checkbox-label {
+      width: 40%;
+    }
+
+    &__part-result {
+      justify-content: flex-start;
+      align-items: baseline;
+    }
+
+    &__part-result-score {
+      margin: 0 0 0 5px;
+      line-height: auto;
+      font-size: 15px;
+    }
+
+    &__part-result-line {
+      display: none;
+    }
+
+    &__info-range-field {
+      margin: 26px auto 9px;
+      width: 100%;
+    }
+
+    &__info-range-list {
+      margin: 0 5px;
+    }
+
+    &__info-range-item {
+      padding: 13px 8px;
+    }
+
+    &__info-range-btn {
+      border-radius: 8px;
+      margin: 5px 4px;
+      width: 16px;
+      height: 16px;
+      font-size: 14px;
+    }
+
+    &__info-textarea {
+      margin-top: 17px;
+    }
+
+    &__day-score {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      width: 60%;
+    }
+
+    &__day-score-sum {
+      margin: 0 15px 0 10px;
+    }
+
+    &__day-score-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+    }
+
+    &__goal-result-short {
+      margin-bottom: 0;
+    }
+
+    &__day-score-text {
+      margin: 10px 0 24px;
+    }
+
+    &__total-score {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &__total-score-sum {
+      margin-left: 10px;
+    }
+
+    &__total-score-text {
+      margin: 8px 0 24px;
+    }
+
+    &__range-score {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &__range-score-sum {
+      margin-left: 10px;
+    }
+
+    &__range-score-text {
+      margin: 8px 0 27px;
+    }
+
+    &__promo {
+      margin-top: 13px;
+    }
+
+    &__promo-section {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    &__promo-title {
+      margin: 3px 10px 10px;
+      text-align: center;
+    }
+
+    &__promo-text {
+      margin-bottom: 29px;
+    }
+
+    &__close-btn {
+      margin: 12px auto 17px;
+    }
+
+    &__table-column--future {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 5px 15px;
+    }
+
+    &__goal-result-short--future {
+      margin: 0;
+    }
+
+    &__goal-result-select-goals {
+      margin: 0;
+    }
+
+    &__table-column--future {
+      padding: 8px 15px;
+    }
+
+    &__table-column--future:last-child {
+      padding: 5px 15px;
+    }
+  }
+}
+
+@media (min-width: 750px) and (max-width: 950px) {
+  .day {
+    &__info-range-field {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .day {
+    &__info-checkbox-label {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .day__info-range-item {
+    padding: 13px 3px;
+  }
+
+  .day__info-range-btn {
+    border-radius: 7px;
+    margin: 0 2px 0 2px;
+    width: 14px;
+    height: 14px;
+  }
+}

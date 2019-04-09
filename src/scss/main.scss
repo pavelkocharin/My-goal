@@ -59,6 +59,12 @@
     color: #737373;
   }
 
+  &__subtitle--goals {
+    margin: -10px 0 27px 0;
+    
+    font-size: 20px;
+  }
+
   &__clouds {
     background-image: url('../img/index/clouds.png');
     background-repeat: repeat;
@@ -97,7 +103,127 @@
     margin: 0 0 100px;
     padding: 0;
   }
+
+  &__goals-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+    width: calc(100%-30px);
+    max-width: 1000px;
+  }
+
+  &__goals-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  &__goals-status-item {
+    margin-bottom: 10px;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__goals-status-item--not-paid,
+  &__goals-status-item--not-reg {
+    background-color: #ffe5e5;
+  }
+
+  &__goals-status-item--little-money {
+    background-color: #e5eeff;
+  }
+
+  &__goals-status-item--good-balance {
+    background-color: #cdffcc;
+  }
+
+  &__goals-status-link {
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+    color: inherit;
+    font-family: 'FuturaPTBook';
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  &__goals-status-link:hover {
+    text-decoration: none;
+  }
+
+  &__goals-status-text {
+    margin: 9px 0 13px;
+    line-height: 28px;
+    font-family: 'FuturaPTBook';
+    font-size: 20px;
+    color: #737373;
+  }
+
+  &__goals-status-text--description {
+    margin: 15px 0 9px;
+  }
+
+  &__goals-period {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 23px 0 57px;
+  }
+
+  &__goals-period-text {
+    text-align: center;
+    line-height: 28px;
+    font-family: 'FuturaPTBook';
+    font-size: 20px;
+    color: #737373;
+  }
+
+  &__goals-period-title {
+    margin-bottom: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'FuturaPTDemi';
+    font-size: 18px;
+  }
+
+  &__goals-period-name {
+    font-family: 'FuturaPTBook';
+    font-size: 16px;
+    color: #737373;
+  }
+
+  &__goals-period-past-links-field {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__goals-period-past {
+    margin: 12px 0 17px;
+  }
+
+  &__goals-period-past-item {
+    display: flex;
+    margin-left: 20px;
+  }
+
+  &__goals-period-name {
+    padding: 0 3px;
+  }
+
+  &__goals-period-name:hover {
+    text-decoration: none;
+  }
 }
+
+
 
 @media (max-width: 830px) {
   .main {
@@ -156,5 +282,78 @@
       margin: 10px 0 54px;
       width: auto;
     }
+
+    &__goals-period-past-links-field {
+      flex-direction: column;
+    }
+
+    &__goals-period-past-item {
+      margin-left: 0;
+    }
   }
 }
+
+@media (max-width: 830px) {
+  .main {
+    &__goals-status-text,
+    &__goals-status-link {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    &__goals-status-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 30px;
+      width: calc(100%-60px);
+    }
+
+    &__goals-status-text {
+      padding: 0;
+      line-height: 21px;
+    }
+
+    &__goals-status-text--description {
+      margin-top: 15px;
+      line-height: 23px;
+    }
+
+    &__subtitle--goals {
+      margin: 0 0 5px;
+    }
+
+    &__goals-status-item {
+      min-height: 50px;
+    }
+
+    &__goals-period {
+      margin-top: 0;
+    }
+
+    &__goals-period-title {
+      margin-top: 11px;
+    }
+
+    &__goals-period-past {
+      margin-top: 9px;
+    }
+
+    &__goals-period-past-links-field {
+      margin-top: 10px;
+    }
+
+    &__goals-period-past-item {
+      margin-top: 8px;
+    }
+
+    &__goals-period-text {
+      margin-top: 8px;
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}
+    
+
+  

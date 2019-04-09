@@ -22,13 +22,16 @@
 
   &__title:before {
     position: absolute;
-    left: -2rem;
-    top: .25rem;
-    margin-top: .65rem;
-    font-family: 'FontAwesome';
-    content: '\f10c';
+    left: -35px;
+    top: .55rem;
+    margin-top: .35rem;
+    content: '';
     font-size: .7rem;
     color: #c0c1c5;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #c0c1c5;
+    border-radius: 15px;
   }
 
   &__answer {
@@ -75,7 +78,7 @@
 
     &__title:before {
       left: -2rem;
-      top: -.25rem;
+      top: 0rem;
     }
 
     &__title:first-child {
