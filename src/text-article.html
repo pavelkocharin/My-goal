@@ -6,20 +6,15 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-        
   </head>
-
   <body class="body-page body-page--short">
-    
     <header class="header">
       <div class="header__top">
         <div class="header__top-bgc">
           <div class="header__top-content">
-
-            <a class="header-logo" href="index.html">
+            <span class="header-logo">
               Физпривычка.рф
-            </a>
-
+            </span>
             <nav class="header-nav">
               <div class="header-nav__mobile-btn" id="header-nav__mobile-btn"></div>
               <ul class="header-nav__list">
@@ -38,11 +33,8 @@
                     КОНТАКТЫ
                   </a>
                 </li>
-                <div class="header-nav__line"></div>
               </ul>
             </nav>
-
-              
             <form class="header-form" id="header-form" name="header-form" method="get">
               <button class="header-form__btn header-form__btn--profile" type="button" name="header-profile" form="header-form">
                 Профиль
@@ -55,7 +47,6 @@
         </div>
       </div>     
     </header>
-
     <main class="main">
       <h1 class="main__title main__title--text-page">
         СТАТЬЯ
@@ -63,18 +54,15 @@
       <div class="main__text-block">
         <p class="main__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione.
-      </p>
-      <p class="main__text">
+        </p>
+        <p class="main__text">
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-      </p>
-      <p class="main__text">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
-      </p>
+        </p>
+        <p class="main__text">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione 
+        </p>
       </div>
-      
-
     </main>
-
     <footer class="footer">
       <span class="footer__logo">
         Физпривычка.рф
@@ -105,7 +93,7 @@
           </a>
         </div>
         <div class="footer__content-item">
-          <a href="news.html" class="footer__content-link">
+          <a href="#" class="footer__content-link">
             НОВОСТИ
           </a>
         </div>
@@ -129,26 +117,26 @@
           <a href="https://www.robokassa.ru" class="footer__payments-link">
             <img src="./assets/img/index/robokassa.png" alt="иконка робокассы" class="footer__payments-icon">
           </a>
-          <a href="#" class="footer__payments-link">
+          <a class="footer__payments-link">
             <img src="./assets/img/index/wmoney.png" alt="иконка webmoney" class="footer__payments-icon">
           </a>
-          <a href="#" class="footer__payments-link">
+          <a class="footer__payments-link">
             <img src="./assets/img/index/visa.png" alt="иконка visa" class="footer__payments-icon">
           </a>
-          <a href="#" class="footer__payments-link">
+          <a class="footer__payments-link">
             <img src="./assets/img/index/mcard.png" alt="иконка mastercard" class="footer__payments-icon">
           </a>
-          <a href="#" class="footer__payments-link">
+          <a class="footer__payments-link">
             <img src="./assets/img/index/mir-logo.png" alt="иконка платежной системы Мир" class="footer__payments-icon">
           </a>
         </div>
       </div>
     </footer>
-
+    <!-- раздел модальных окон -->
     <div class="popup-layout">
       <div class="popup-layout__popup-menu"></div>
       <button class="popup-layout__popup-menu-close"></button>
-
+      <!-- окно регистрации -->
       <div class="popup-layout__registration-field">
         <div class="registration">
           <button class="registration__close-btn"></button>
@@ -159,26 +147,32 @@
             <input class="registration__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль ещё раз" autocomplete="off">
-            <button class="registration__button" id="send-data" type="submit">ПРОДОЛЖИТЬ</button>
+            <button class="registration__button" id="send-data" type="submit">
+              ПРОДОЛЖИТЬ
+            </button>
           </form>
         </div>
       </div>
-
+      <!-- окно входа -->
       <div class="popup-layout__entry-field">
         <div class="entry">
           <button class="entry__close-btn"></button>
           <h1 class="entry__title">
             ВХОД
           </h1>
-          <form class="entry__form" action="#" id="entry__form" name="entry__form" method="POST">
+          <form class="entry__form" action="#" id="entry__form" name="entry__form" method="GET">
             <input class="entry__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="entry__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <button class="entry__button" id="enter-form" type="submit">ВОЙТИ</button>
-            <button class="entry__button-recovery" id="recovery-pass" type="button">Забыли пароль?</button>
+            <button class="entry__button" id="enter-form" type="submit">
+              ВОЙТИ
+            </button>
+            <button class="entry__button-recovery" id="recovery-pass" type="button">
+              Забыли пароль?
+            </button>
           </form>
         </div>
       </div>
-
+      <!-- окно восстановления пароля -->
       <div class="popup-layout__recovery-field">
         <div class="recovery">
           <button class="recovery__close-btn"></button>
@@ -187,21 +181,25 @@
           </h1>
           <form class="recovery__form" action="#" id="recovery__form" name="recovery__form" method="POST">
             <input class="recovery__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <button class="recovery__button" id="recovery-pass-form" type="submit">ДАЛЕЕ</button>
+            <button class="recovery__button" id="recovery-pass-form" type="submit">
+              ДАЛЕЕ
+            </button>
           </form>
         </div>
       </div>
-
+      <!-- окно сообщения о новом пароле -->
       <div class="popup-layout__message-pass-field">
         <div class="new-pass">
           <button class="new-pass__close-btn"></button>
           <p class="new-pass__text">
             На ваш электронный адрес отправлен новый пароль
           </p>
-          <button class="new-pass__button-index" id="new-pass-btn" type="button">ПЕРЕЙТИ НА САЙТ</button>
+          <button class="new-pass__button-index" id="new-pass-btn" type="button">
+            ПЕРЕЙТИ НА САЙТ
+          </button>
         </div>
       </div>
-
+      <!-- по ТЗ не используется, но лучше сверстать -->
       <div class="popup-layout__success-field">
         <div class="success">
           <button class="success__close-btn"></button>
@@ -211,12 +209,23 @@
           <p class="success__text">
             Вы зарегистрировались и можете перейти на сайт, пополнить баланс и стать участником.
           </p>
-          <button class="success__button-index" id="success-btn" type="button">ПЕРЕЙТИ НА САЙТ</button>
+          <button class="success__button-index" id="success-btn" type="button">
+            ПЕРЕЙТИ НА САЙТ
+          </button>
         </div>
       </div>
-
-      <div class="popup-layout__not-yet-mess"></div>
+      <!-- сообщение данные сохранены -->
+      <div class="popup-layout__saved">
+        <div class="saved">
+          <button class="saved__close-btn" type="button"></button>
+          <p class="saved__text">
+            Данные сохранены
+          </p>
+          <button class="saved__button" id="saved-btn" type="button">
+            ПРОДOЛЖИТЬ
+          </button>
+        </div>
+      </div>
     </div>
-
   </body>
 </html>

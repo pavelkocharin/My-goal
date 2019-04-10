@@ -891,6 +891,7 @@
 
 @media (min-width: 750px) and (max-width: 950px) {
   .day {
+
     &__info-range-field {
       width: 60%;
     }
@@ -899,6 +900,7 @@
 
 @media (max-width: 470px) {
   .day {
+
     &__info-checkbox-label {
       width: 90%;
     }
@@ -906,14 +908,16 @@
 }
 
 @media (max-width: 440px) {
-  .day__info-range-item {
-    padding: 13px 3px;
-  }
+  .day {
+    &__info-range-item {
+      padding: 13px 3px;
+    }
 
-  .day__info-range-btn {
-    border-radius: 7px;
-    margin: 0 2px 0 2px;
-    width: 14px;
-    height: 14px;
+    &__info-range-btn {
+      border-radius: 7px;
+      margin: 0 2px 0 2px;
+      width: 14px;
+      height: 14px;
+    }
   }
 }

@@ -61,7 +61,6 @@
 
   &__subtitle--goals {
     margin: -10px 0 27px 0;
-    
     font-size: 20px;
   }
 
@@ -223,8 +222,6 @@
   }
 }
 
-
-
 @media (max-width: 830px) {
   .main {
     &__container:last-child {
@@ -245,6 +242,10 @@
       padding: 0 0 5px;
       line-height: 1.63rem;
       font-size: 1rem;
+    }
+
+    &__subtitle--goals {
+      margin: 0 0 5px;
     }
 
     &__title--marine {
@@ -285,16 +286,14 @@
 
     &__goals-period-past-links-field {
       flex-direction: column;
+      margin-top: 10px;
     }
 
     &__goals-period-past-item {
       margin-left: 0;
+      margin-top: 8px;
     }
-  }
-}
-
-@media (max-width: 830px) {
-  .main {
+  
     &__goals-status-text,
     &__goals-status-link {
       margin: 0;
@@ -319,10 +318,6 @@
       line-height: 23px;
     }
 
-    &__subtitle--goals {
-      margin: 0 0 5px;
-    }
-
     &__goals-status-item {
       min-height: 50px;
     }
@@ -337,14 +332,6 @@
 
     &__goals-period-past {
       margin-top: 9px;
-    }
-
-    &__goals-period-past-links-field {
-      margin-top: 10px;
-    }
-
-    &__goals-period-past-item {
-      margin-top: 8px;
     }
 
     &__goals-period-text {
