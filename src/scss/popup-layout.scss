@@ -122,4 +122,17 @@
   &__success-field--active {
     display: block;
   }
+
+  &__saved {
+    position: absolute;
+    top: calc(50%-100px);
+    left: calc(50%-300px);
+    display: none;
+    width: 600px;
+    height: 200px;
+  }
+
+  &__saved--active {
+    display: block;
+  }
 }

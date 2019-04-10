@@ -35,28 +35,6 @@
     font-size: .95rem;
     color: #fff;
   }
-
-  &__line {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition:all .33s linear;
-    width: 63px;
-    height: 2px;
-    background: #fff;
-  }
-
-  .header-nav__item--goal:hover ~ &__line {
-    transform:translate(112px);
-    transition:all .33s linear;
-    width: 85px;
-  }
-
-  .header-nav__item--contacts:hover ~ &__line {
-    transform:translate(248px);
-    transition:all .33s linear;
-    width: 73px;
-  }
 }
 
 
@@ -95,30 +73,6 @@
     &__item {
       margin: 0;
       padding: 0;
-    }
-    
-    &__line {
-      position: absolute;
-      top: 38px;
-      left: 105px;
-      transition:all .33s linear;
-      width: 90px;
-      height: 2px;
-      background: #fff;
-    }
-  
-    .header-nav__item--goal:hover ~ &__line {
-      left: 90px;
-      transform:translateY(50px);
-      transition:all .33s linear;
-      width: 122px;
-    }
-  
-    .header-nav__item--contacts:hover ~ &__line {
-      left: 98px;
-      transform:translateY(100px);
-      transition:all .33s linear;
-      width: 106px;
     }
   }
 }
