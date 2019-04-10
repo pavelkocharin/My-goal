@@ -16,9 +16,9 @@
         <div class="header__top-bgc">
           <div class="header__top-content">
 
-            <a class="header-logo" href="index.html">
+            <span class="header-logo">
               Физпривычка.рф
-            </a>
+            </span>
 
             <nav class="header-nav">
               <div class="header-nav__mobile-btn" id="header-nav__mobile-btn"></div>
@@ -38,7 +38,6 @@
                     КОНТАКТЫ
                   </a>
                 </li>
-                <div class="header-nav__line"></div>
               </ul>
             </nav>
 
@@ -330,10 +329,11 @@
       </div>
     </footer>
 
+    <!-- раздел модальных окон -->
     <div class="popup-layout">
       <div class="popup-layout__popup-menu"></div>
       <button class="popup-layout__popup-menu-close"></button>
-
+      <!-- окно регистрации -->
       <div class="popup-layout__registration-field">
         <div class="registration">
           <button class="registration__close-btn"></button>
@@ -348,7 +348,7 @@
           </form>
         </div>
       </div>
-
+      <!-- окно входа -->
       <div class="popup-layout__entry-field">
         <div class="entry">
           <button class="entry__close-btn"></button>
@@ -363,7 +363,7 @@
           </form>
         </div>
       </div>
-
+      <!-- окно восстановления пароля -->
       <div class="popup-layout__recovery-field">
         <div class="recovery">
           <button class="recovery__close-btn"></button>
@@ -376,7 +376,7 @@
           </form>
         </div>
       </div>
-
+      <!-- окно сообщения о новом пароле -->
       <div class="popup-layout__message-pass-field">
         <div class="new-pass">
           <button class="new-pass__close-btn"></button>
@@ -386,7 +386,7 @@
           <button class="new-pass__button-index" id="new-pass-btn" type="button">ПЕРЕЙТИ НА САЙТ</button>
         </div>
       </div>
-
+      <!-- по ТЗ не используется, но лучше сверстать -->
       <div class="popup-layout__success-field">
         <div class="success">
           <button class="success__close-btn"></button>
@@ -399,8 +399,18 @@
           <button class="success__button-index" id="success-btn" type="button">ПЕРЕЙТИ НА САЙТ</button>
         </div>
       </div>
-
-      <div class="popup-layout__not-yet-mess"></div>
+      <!-- сообщение данные сохранены -->
+      <div class="popup-layout__saved">
+        <div class="saved">
+          <button class="saved__close-btn" type="button"></button>
+          <p class="saved__text">
+            Данные сохранены
+          </p>
+          <button class="saved__button" id="saved-btn" type="button">
+            ПРОДOЛЖИТЬ
+          </button>
+        </div>
+      </div>
     </div>
 
   <script type="text/javascript" src="./assets/js/app.js"></script></body>

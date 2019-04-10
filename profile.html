@@ -16,9 +16,9 @@
         <div class="header__top-bgc">
           <div class="header__top-content">
 
-            <a class="header-logo" href="index.html">
+            <span class="header-logo">
               Физпривычка.рф
-            </a>
+            </span>
 
             <nav class="header-nav">
               <div class="header-nav__mobile-btn" id="header-nav__mobile-btn"></div>
@@ -116,16 +116,15 @@
             <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль" autocomplete="off">
             <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль ещё раз" autocomplete="off">
             <div class="profile-item__btn-block">
-              <button class="profile-item__form-button profile-item__form-button--reset" type="reset" form="time-zone">
+              <button class="profile-item__form-button--reset" type="reset" form="change-password">
               ОТМЕНА
               </button>
-              <button class="profile-item__form-button" type="submit" form="time-zone">
+              <button class="profile-item__form-button" type="submit" form="change-password">
                 СОХРАНИТЬ
               </button>
             </div>
-            
           </form>
-      </div>
+        </div>
       </div>
       
 
@@ -270,8 +269,19 @@
           <button class="success__button-index" id="success-btn" type="button">ПЕРЕЙТИ НА САЙТ</button>
         </div>
       </div>
+      <!-- сообщение данные сохранены -->
+      <div class="popup-layout__saved">
+        <div class="saved">
+          <button class="saved__close-btn" type="button"></button>
+          <p class="saved__text">
+              Данные сохранены
+          </p>
+          <button class="saved__button" id="saved-btn" type="button">
+            ПРОДOЛЖИТЬ
+          </button>
+        </div>
+      </div>
 
-      <div class="popup-layout__not-yet-mess"></div>
     </div>
 
   <script type="text/javascript" src="./assets/js/app.js"></script></body>
