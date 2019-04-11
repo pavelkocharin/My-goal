@@ -1,3 +1,5 @@
+@import 'variables';
+
 .saved {
   position: relative;
   display: flex;
@@ -16,11 +18,11 @@
     text-align: center;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__button {
-    background-color: #20b208;
+    background-color: $button-color;
     border: none;
     border-radius: 25px;
     margin-top: 0;
@@ -32,7 +34,7 @@
   }
 
   &__button:hover {
-    box-shadow: 0 0 5px #20b208;
+    box-shadow: 0 0 5px $button-color;
     background-color: #2dbd17;
   }
 

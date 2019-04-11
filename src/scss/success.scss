@@ -1,3 +1,5 @@
+@import 'variables';
+
 .success {
   position: relative;
   display: flex;
@@ -13,7 +15,7 @@
     line-height: 40px;
     font-family: 'FuturaPTBold';
     font-size: 40px;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__text {
@@ -23,11 +25,11 @@
     text-align: center;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__button-index {
-    background-color: #20b208;
+    background-color: $button-color;
     border: none;
     border-radius: 25px;
     margin-top: 0;
@@ -39,7 +41,7 @@
   }
 
   &__button-index:hover {
-    box-shadow: 0 0 5px #20b208;
+    box-shadow: 0 0 5px $button-color;
     background-color: #2dbd17;
   }
 

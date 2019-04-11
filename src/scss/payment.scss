@@ -1,3 +1,5 @@
+@import 'variables';
+
 .payment {
   display: flex;
   flex-direction: column;
@@ -11,7 +13,7 @@
     line-height: 1.75rem;
     font-family: 'FuturaPTBook';
     font-size: 1.25rem;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__button-group {
@@ -34,7 +36,7 @@
     text-align: left;
     font-family: 'FuturaPTDemi';
     font-size: .95rem;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__link--ya {
@@ -64,9 +66,9 @@
   }
 
   &__link:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
-    border-color: #27d80c;
+    border-color: $button-color-hover;
     color: #fff;
   }
 }

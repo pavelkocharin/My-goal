@@ -1,3 +1,5 @@
+@import 'variables';
+
 .day {
   display: flex;
   width: 100%;
@@ -10,7 +12,7 @@
     padding: 8px 0;
     margin: 0 auto;
     width: 16.7%;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__date-title {
@@ -37,7 +39,7 @@
 
   &__table {
     display: flex;
-    border: 2px solid #dd7fb0;
+    border: 2px solid $table-border;
   }
 
   &__table-column {
@@ -52,12 +54,12 @@
   }
 
   &__table-column:nth-child(2) {
-    border-left: 2px solid #dd7fb0;
-    border-right: 2px solid #dd7fb0;
+    border-left: 2px solid $table-border;
+    border-right: 2px solid $table-border;
   }
 
   &__table-column:nth-child(4) {
-    border-left: 2px solid #dd7fb0;
+    border-left: 2px solid $table-border;
   }
 
   &__table-column-title {
@@ -66,11 +68,11 @@
     text-transform: uppercase;
     font-size: 22px;
     font-family: 'FuturaPTDemi';
-    color: #dd7fb0;
+    color: $table-border;
   }
 
   &__table-column-title--success {
-    color: #20b208;
+    color: $button-color;
   }
 
   &__table-column-title--empty {
@@ -82,11 +84,11 @@
     flex-direction: column;
     font-size: 1rem;
     font-family: 'FuturaPTBook';
-    color: #dd7fb0;
+    color: $table-border;
   }
 
   &__about-goal-short--success {
-    color: #20b208;
+    color: $button-color;
   }
 
   &__goal-status-block {
@@ -123,11 +125,11 @@
   }
 
   &__goal-result-short--success {
-    color: #20b208;
+    color: $button-color;
   }
 
   &__goal-result-short--red {
-    color: #dd7fb0;
+    color: $table-border;
   }
 
   &__goal-result-short--future {
@@ -141,7 +143,7 @@
     text-decoration: underline;
     font-size: 15px;
     font-family: 'FuturaPTBook';
-    color: #20b208;
+    color: $button-color;
     cursor: pointer;
   }
 
@@ -221,7 +223,7 @@
   &__goal-item-checkmark:after {
     left: 4px;
     top: 0px;
-    border: solid #20b208;
+    border: solid $button-color;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     width: 5px;
@@ -254,7 +256,7 @@
     line-height: 27px;
     font-family: 'FuturaPTDemi';
     font-size: 24px;
-    color: #20b208;
+    color: $button-color;
   }
 
   &__day-score-text,
@@ -293,7 +295,7 @@
     line-height: 27px;
     font-family: 'FuturaPTDemi';
     font-size: 24px;
-    color: #20b208;
+    color: $button-color;
   }
 
   &__part-result-text--left {
@@ -306,7 +308,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 2px solid #dd7fb0;
+    border: 2px solid $table-border;
     border-top: none;
     padding: 0 50px;
   }
@@ -315,7 +317,7 @@
     margin: 21px 0 13px;
     font-family: 'FuturaPTDemi';
     font-size: 24px;
-    color: #82848C;
+    color: $second-grey;
   }
 
   &__info-text {
@@ -323,7 +325,7 @@
     line-height: 24px;
     font-family: 'FuturaPTBook';
     font-size: 18px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__info-form {
@@ -403,7 +405,7 @@
   &__info-item-checkmark:after {
     left: 4px;
     top: 0px;
-    border: solid #20b208;
+    border: solid $button-color;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     width: 5px;
@@ -441,7 +443,7 @@
     padding: 13px 10px;
     font-family: 'FuturaPTDemi';
     font-size: 14px;
-    color: #82848c;
+    color: $second-grey;
     cursor: pointer;
   }
 
@@ -452,7 +454,7 @@
   }
 
   &__info-range-btn {
-    background-color: #82848c;
+    background-color: $second-grey;
     border:none;
     border-radius: 8px;
     margin: 5px 8px;
@@ -487,7 +489,7 @@
     transition: ease .15s;
     border: none;
     border-radius: 30px;
-    background-color: #20b208;
+    background-color: $button-color;
     margin-bottom: 5px;
     width: 12.5rem;
     height: 3.7rem;
@@ -499,13 +501,13 @@
   }
 
   &__info-save-day-btn:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
   }
 
   &__info-save-day-btn--saved {
     background-color: #f2f2f2;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__info-save-day-btn--saved:hover {
@@ -517,7 +519,7 @@
     margin-bottom: 15px;
     font-family: 'FuturaPTBook';
     font-size: 18px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__info-edit-day-btn {
@@ -528,7 +530,7 @@
     text-decoration: underline;
     font-size: 18px;
     font-family: 'FuturaPTMedium';
-    color: #82848c;
+    color: $second-grey;
     cursor: pointer;
   }
 
@@ -540,7 +542,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px dashed #82848c;
+    border: 3px dashed $second-grey;
     background: #f2f2f2;
     width: 100%;
   }
@@ -556,7 +558,7 @@
     margin-right: 20px;
     font-size: 20px;
     font-family: 'FuturaPTBook';
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__promo-number {
@@ -564,7 +566,7 @@
     padding: 5px 15px;
     font-size: 26px;
     font-family: 'FuturaPTHeavy';
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__promo-text {
@@ -572,7 +574,7 @@
     text-align: center;
     font-size: 17px;
     font-family: 'FuturaPTBook';
-    color: #737373;
+    color: $first-grey;
   }
 
   &__close-btn {
@@ -583,7 +585,7 @@
     text-decoration: underline;
     font-size: 16px;
     font-family: 'FuturaPTBook';
-    color: #82848c;
+    color: $second-grey;
     cursor: pointer;
   }
 
@@ -595,7 +597,7 @@
     transition: ease .15s;
     border: none;
     border-radius: 30px;
-    background-color: #20b208;
+    background-color: $button-color;
     margin: 3px auto 0;
     width: 125px;
     height: 28px;
@@ -607,7 +609,7 @@
   }
 
   &__goal-result-select-goals:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 4px rgba(59, 224, 112, 0.9);
   }
 
@@ -645,14 +647,14 @@
 
     &__table {
       flex-direction: column;
-      border: 2px solid #dd7fb0;
+      border: 2px solid $table-border;
       width: calc(100%-4px);
     }
 
     &__table-column {
       padding: 8px 15px;
       width: calc(100%-30px);
-      border-top: 2px solid #dd7fb0;
+      border-top: 2px solid $table-border;
       border-left: none;
       border-right: none;
     }

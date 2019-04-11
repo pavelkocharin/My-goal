@@ -1,3 +1,5 @@
+@import 'variables';
+
 .registration {
   position: relative;
   display: flex;
@@ -13,7 +15,7 @@
     line-height: 40px;
     font-family: 'FuturaPTBold';
     font-size: 40px;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__form {
@@ -41,7 +43,7 @@
   }
 
   &__button {
-    background-color: #20b208;
+    background-color: $button-color;
     border: none;
     border-radius: 25px;
     margin-top: 5px;
@@ -53,7 +55,7 @@
   }
 
   &__button:hover {
-    box-shadow: 0 0 5px #20b208;
+    box-shadow: 0 0 5px $button-color;
     background-color: #2dbd17;
   }
 

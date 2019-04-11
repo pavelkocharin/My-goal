@@ -1,3 +1,5 @@
+@import 'variables';
+
 .profile-item{
   display: flex;
   flex-direction: column;
@@ -28,7 +30,7 @@
     text-transform: uppercase;
     font-family: 'FuturaPTDemi';
     font-size: 35px;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__link {
@@ -40,13 +42,13 @@
     text-align: center;
     font-family: 'FuturaPTDemi';
     font-size: 15px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__link:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
-    border-color: #27d80c;
+    border-color: $button-color-hover;
     color: #fff;
   }
 
@@ -56,7 +58,7 @@
     text-align: center;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__text--payment {
@@ -83,7 +85,7 @@
     height: 50px;
     font-family: 'FuturaPTBook';
     font-size: 18px;
-    color: #737373;
+    color: $first-grey;
     //стилизация стрелки
     appearance: none;
     background-image: url('../img/index/select-arrow.png');
@@ -96,14 +98,14 @@
     line-height: 50px;
     font-family: 'FuturaPTBook';
     font-size: 18px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__form-button {
     transition: ease .15s;
     border: none;
     border-radius: 25px;
-    background-color: #20b208;
+    background-color: $button-color;
     font-family: 'FuturaPTDemi';
     font-size: .95rem;
     color: #fff;
@@ -113,7 +115,7 @@
   }
 
   &__form-button:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
   }
 
@@ -121,7 +123,7 @@
     transition: ease .15s;
     border: none;
     border-radius: 25px;
-    background-color: #20b208;
+    background-color: $button-color;
     margin: 40px 0 50px;
     padding: 0 35px;
     font-family: 'FuturaPTDemi';
@@ -133,7 +135,7 @@
   }
 
   &__button:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
   }
 
@@ -166,13 +168,13 @@
     cursor: pointer;
     width: 140px;
     height: 50px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__form-button--reset:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
-    border-color: #27d80c;
+    border-color: $button-color-hover;
     color: #fff;
   }
 }

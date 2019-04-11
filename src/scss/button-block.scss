@@ -1,3 +1,5 @@
+@import 'variables';
+
 .button-block {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
     transition: ease .15s;
     border: none;
     border-radius: 25px;
-    background-color: #20b208;
+    background-color: $button-color;
     font-family: 'FuturaPTDemi';
     font-size: .95rem;
     color: #fff;
@@ -18,7 +20,7 @@
   }
 
   &__reg:hover {
-    background-color: #27d80c;
+    background-color: $button-color-hover;
     box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
   }
 

@@ -1,3 +1,5 @@
+@import 'variables';
+
 .goals {
   display: flex;
   flex-direction: column;
@@ -12,7 +14,7 @@
     margin: 26px 0 0;
     font-family: 'FuturaPTBold';
     font-size: 32px;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__subtitle {

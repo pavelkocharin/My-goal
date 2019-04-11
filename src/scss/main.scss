@@ -1,3 +1,5 @@
+@import 'variables';
+
 .main {
   flex-grow: 1;
   display: flex;
@@ -42,12 +44,12 @@
 
   &__title--grey {
     margin-top: 3.7rem;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__title--text-page {
     margin: 2.7rem 0 .7rem;
-    color: #82848c;
+    color: $second-grey;
   }
 
   &__subtitle {
@@ -56,7 +58,7 @@
     text-align: center;
     font-size: 1.38rem;
     font-family: 'FuturaPTBook';
-    color: #737373;
+    color: $first-grey;
   }
 
   &__subtitle--goals {
@@ -162,7 +164,7 @@
     line-height: 28px;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__goals-status-text--description {
@@ -182,7 +184,7 @@
     line-height: 28px;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__goals-period-title {
@@ -196,7 +198,7 @@
   &__goals-period-name {
     font-family: 'FuturaPTBook';
     font-size: 16px;
-    color: #737373;
+    color: $first-grey;
   }
 
   &__goals-period-past-links-field {
