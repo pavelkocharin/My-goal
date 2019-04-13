@@ -1,0 +1,44 @@
+@import 'variables';
+
+.day-date { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2; 
+  padding: 8px 0;
+  margin: 0 auto;
+  width: 16.7%;
+  color: $second-grey;
+
+  &__title {
+    font-size: 17px;
+    font-family: 'FuturaPTMedium';
+  }
+
+  &__number {
+    font-size: 24px;
+    font-family: 'FuturaPTHeavy';
+  }
+
+  &__week-day {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'FuturaPTBook';
+  }
+}
+
+@media (max-width: 950px) {
+  .day-date {
+    flex-direction: row;
+    padding: 5px 15px;
+    width: calc(100%-30px);
+    
+    &__title {
+      margin-left: 5px;
+    }
+
+    &__number {
+      padding: 0 5px;
+    }
+  }
+}

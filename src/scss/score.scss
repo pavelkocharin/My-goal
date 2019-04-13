@@ -1,0 +1,94 @@
+@import 'variables';
+
+.score {
+  &__day-score,
+  &__total-score,
+  &__range-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__day-score-title,
+  &__total-score-title,
+  &__range-title {
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 15px;
+  }
+
+  &__day-score-sum,
+  &__total-score-sum,
+  &__range-score-sum {
+    margin: 2px 0 1px;
+    text-align: center;
+    line-height: 27px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: $button-color;
+  }
+
+  &__day-score-text,
+  &__total-score-text,
+  &__range-score-text {
+    margin: 13px 0 21px;
+    line-height: 19px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+  }
+}
+
+@media (max-width: 950px) {
+  .score {
+    &__day-score {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: baseline;
+      width: 60%;
+    }
+
+    &__day-score-sum {
+      margin: 0 15px 0 10px;
+    }
+
+    &__day-score-mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      width: 100%;
+    }
+
+    &__day-score-text {
+      margin: 10px 0 24px;
+    }
+
+    &__total-score {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &__total-score-sum {
+      margin-left: 10px;
+    }
+
+    &__total-score-text {
+      margin: 8px 0 24px;
+    }
+
+    &__range-score {
+      flex-direction: row;
+      align-items: baseline;
+    }
+
+    &__range-score-sum {
+      margin-left: 10px;
+    }
+
+    &__range-score-text {
+      margin: 8px 0 27px;
+    }
+  }
+}

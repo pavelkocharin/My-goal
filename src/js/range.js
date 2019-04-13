@@ -2,11 +2,11 @@
 //функция ползунка range страницы Цели
 
 (function () {
-  var activeClass = 'day__info-range-item--active';
-  var ItemActive = '.day__info-range-item--active'; 
-  var rangeItems = Array.from(document.querySelectorAll('.day__info-range-item'));
-  var BtnMinus = document.querySelector('.day__info-range-btn--min');
-  var BtnPlus = document.querySelector('.day__info-range-btn--plus');
+  var activeClass = 'range-field__item--active';
+  var ItemActive = '.range-field__item--active'; 
+  var rangeItems = Array.from(document.querySelectorAll('.range-field__item'));
+  var BtnMinus = document.querySelector('.range-field__btn--min');
+  var BtnPlus = document.querySelector('.range-field__btn--plus');
   
   var rangeItemActive;
   function getActiveItem() {

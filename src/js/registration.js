@@ -53,28 +53,3 @@
   }
 
 }()); 
-
-
-
-
-
-// //Сообщение об успешной регистрации
-// var closeModalBtnSuccess = document.querySelector(".success__close-btn");
-// var sendRegistration = document.querySelector(".registration__button");
-// var successField = document.querySelector(".popup-layout__success-field");
-
-// sendRegistration.onclick = function() {
-//   registrationField.classList.remove("popup-layout__registration-field--active");
-//   successField.classList.add("popup-layout__success-field--active");   
-// }
-
-// closeModalBtnSuccess.onclick = function() {
-//   popup.classList.remove("popup-layout--active");
-//   closeMobileMenu.classList.remove("popup-layout__popup-menu-close--unactive");
-//   successField.classList.remove("popup-layout__success-field--active");
-// }
-
-// var btnIndex = document.querySelector(".success__button-index");
-// btnIndex.onclick = function() {
-//   location.href="index.html";
-// }

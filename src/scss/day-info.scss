@@ -1,0 +1,44 @@
+@import 'variables';
+
+.day-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid $table-border;
+  border-top: none;
+  padding: 0 50px;
+
+  &__title {
+    margin: 21px 0 13px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: $second-grey;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 24px;
+    font-family: 'FuturaPTBook';
+    font-size: 18px;
+    color: $first-grey;
+  }
+}
+
+
+@media (max-width: 950px) {
+  .day-info {
+    padding: 0 15px;
+    width: calc(100%-34px);
+    
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__text {
+      width: 100%;
+      line-height: 20px;
+      font-size: 16px;
+    }
+  }
+}

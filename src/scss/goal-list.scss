@@ -1,0 +1,100 @@
+@import 'variables';
+
+.goal-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__item-title {
+    margin: 12px 0 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 18px;
+  }
+
+  &__item-label {
+    display: block;
+    position: relative;
+    user-select: none;
+    margin-bottom: 10px;
+    width: 80%;
+    line-height: 20px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook';
+    cursor: pointer;
+  }
+
+  &__item-label:hover &__item-checkbox ~ &__item-checkmark {
+    background-color: #ccc;
+  }
+
+  &__item-checkbox {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+  }
+
+  &__item-checkmark {
+    position: absolute;
+    top: 5px;
+    right: -35px;
+    border: 2px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: transparent;
+    height: 14px;
+    width: 14px;
+  }
+
+  &__item-checkmark:after {
+    position: absolute;
+    display: none;
+    content: "";
+  }
+
+  &__item-checkbox:checked ~ &__item-checkmark:after {
+    display: block;
+  }
+
+  &__item-checkmark:after {
+    left: 4px;
+    top: 0px;
+    border: solid $button-color;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    width: 5px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 950px) {
+  .goal-list {
+    margin-top: 10px;
+    
+    &__item-title {
+      margin: 5px 0 12px;
+      text-align: left;
+    }
+
+    &__item-label {
+      width: 93%;
+    }
+
+    &__item-checkmark {
+      top: 0;
+      right: -25px;
+    }
+  }
+}
