@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="./assets/css/app.css" rel="stylesheet"></head>
-
   <body class="body-page">
     <header class="header">
       <div class="header__top">
@@ -20,7 +19,7 @@
               <div class="header-nav__mobile-btn" id="header-nav__mobile-btn"></div>
               <ul class="header-nav__list">
                 <li class="header-nav__item">
-                  <a class="header-nav__link header-nav__link--main" href="index.html">
+                  <a class="header-nav__link header-nav__link--main header-nav__link--underline" href="index.html">
                     ГЛАВНАЯ
                   </a>
                 </li>
@@ -97,9 +96,9 @@
               </li>
             </ol>
             <div class="button-block">
-              <button class="button-block__reg" type="button" name="goals-link" form="header-form">
+              <a class="button-block__reg" href="goals.html">
                 СТАТЬ УЧАСТНИКОМ
-              </button>
+              </a>
               <span class="button-block__text">
                 И получить демо-версию бесплатно
               </span>
@@ -186,9 +185,9 @@
           </div>
         </div>
         <div class="button-block">
-          <button class="button-block__reg" type="button" name="goals-link" form="header-form">
+          <a class="button-block__reg" type="button" name="goals-link" form="header-form">
             СТАТЬ УЧАСТНИКОМ
-          </button>
+          </a>
           <span class="button-block__text">
             И получить демо-версию бесплатно
           </span>
@@ -236,9 +235,9 @@
           </div>
         </div>
         <div class="button-block button-block--main-questions">
-          <button class="button-block__reg" type="button" name="goals-link" form="header-form">
+          <a class="button-block__reg" type="button" name="goals-link" form="header-form">
             СТАТЬ УЧАСТНИКОМ
-          </button>
+          </a>
           <span class="button-block__text">
             И получить демо-версию бесплатно
           </span>
@@ -251,7 +250,7 @@
       </span>
       <div class="footer__content">
         <div class="footer__content-item">
-          <a href="index.html" class="footer__content-link">
+          <a href="index.html" class="footer__content-link footer__content-link--underline">
             ГЛАВНАЯ
           </a>
           <a href="goals.html" class="footer__content-link">
@@ -314,11 +313,9 @@
         </div>
       </div>
     </footer>
-    <!-- раздел модальных окон -->
     <div class="popup-layout">
       <div class="popup-layout__popup-menu"></div>
       <button class="popup-layout__popup-menu-close"></button>
-      <!-- окно регистрации -->
       <div class="popup-layout__registration-field">
         <div class="registration">
           <button class="registration__close-btn"></button>
@@ -329,13 +326,12 @@
             <input class="registration__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль ещё раз" autocomplete="off">
-            <button class="registration__button" id="send-data" type="submit">
+            <a class="registration__button" href="wellcome.html">
               ПРОДОЛЖИТЬ
-            </button>
+            </a>
           </form>
         </div>
       </div>
-      <!-- окно входа -->
       <div class="popup-layout__entry-field">
         <div class="entry">
           <button class="entry__close-btn"></button>
@@ -345,16 +341,15 @@
           <form class="entry__form" action="#" id="entry__form" name="entry__form" method="GET">
             <input class="entry__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="entry__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <button class="entry__button" id="enter-form" type="submit">
+            <a class="entry__button" href="goals.html">
               ВОЙТИ
-            </button>
+            </a>
             <button class="entry__button-recovery" id="recovery-pass" type="button">
               Забыли пароль?
             </button>
           </form>
         </div>
       </div>
-      <!-- окно восстановления пароля -->
       <div class="popup-layout__recovery-field">
         <div class="recovery">
           <button class="recovery__close-btn"></button>
@@ -369,19 +364,17 @@
           </form>
         </div>
       </div>
-      <!-- окно сообщения о новом пароле -->
       <div class="popup-layout__message-pass-field">
         <div class="new-pass">
           <button class="new-pass__close-btn"></button>
           <p class="new-pass__text">
             На ваш электронный адрес отправлен новый пароль
           </p>
-          <button class="new-pass__button-index" id="new-pass-btn" type="button">
+          <a class="new-pass__button-index" href="index.html">
             ПЕРЕЙТИ НА САЙТ
-          </button>
+          </a>
         </div>
       </div>
-      <!-- по ТЗ не используется, но лучше сверстать -->
       <div class="popup-layout__success-field">
         <div class="success">
           <button class="success__close-btn"></button>
@@ -396,7 +389,6 @@
           </button>
         </div>
       </div>
-      <!-- сообщение данные сохранены -->
       <div class="popup-layout__saved">
         <div class="saved">
           <button class="saved__close-btn" type="button"></button>

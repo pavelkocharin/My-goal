@@ -36,9 +36,9 @@
               </ul>
             </nav>
             <form class="header-form" id="header-form" name="header-form" method="get">
-              <button class="header-form__btn header-form__btn--profile" type="button" name="header-profile" form="header-form">
+              <a class="header-form__btn header-form__btn--profile" href="profile.html">
                 Профиль
-              </button>
+              </a>
               <button class="header-form__btn header-form__btn--log-off" type="button" name="header-leave" form="header-form">
                 Выйти
               </button>
@@ -136,11 +136,9 @@
         </div>
       </div>
     </footer>
-    <!-- раздел модальных окон -->
     <div class="popup-layout">
       <div class="popup-layout__popup-menu"></div>
       <button class="popup-layout__popup-menu-close"></button>
-      <!-- окно регистрации -->
       <div class="popup-layout__registration-field">
         <div class="registration">
           <button class="registration__close-btn"></button>
@@ -151,13 +149,12 @@
             <input class="registration__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
             <input class="registration__input" type="password" name="password" required placeholder="Пароль ещё раз" autocomplete="off">
-            <button class="registration__button" id="send-data" type="submit">
+            <a class="registration__button" href="wellcome.html">
               ПРОДОЛЖИТЬ
-            </button>
+            </a>
           </form>
         </div>
       </div>
-      <!-- окно входа -->
       <div class="popup-layout__entry-field">
         <div class="entry">
           <button class="entry__close-btn"></button>
@@ -167,16 +164,15 @@
           <form class="entry__form" action="#" id="entry__form" name="entry__form" method="GET">
             <input class="entry__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
             <input class="entry__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <button class="entry__button" id="enter-form" type="submit">
+            <a class="entry__button" href="goals.html">
               ВОЙТИ
-            </button>
+            </a>
             <button class="entry__button-recovery" id="recovery-pass" type="button">
               Забыли пароль?
             </button>
           </form>
         </div>
       </div>
-      <!-- окно восстановления пароля -->
       <div class="popup-layout__recovery-field">
         <div class="recovery">
           <button class="recovery__close-btn"></button>
@@ -191,19 +187,17 @@
           </form>
         </div>
       </div>
-      <!-- окно сообщения о новом пароле -->
       <div class="popup-layout__message-pass-field">
         <div class="new-pass">
           <button class="new-pass__close-btn"></button>
           <p class="new-pass__text">
             На ваш электронный адрес отправлен новый пароль
           </p>
-          <button class="new-pass__button-index" id="new-pass-btn" type="button">
+          <a class="new-pass__button-index" href="index.html">
             ПЕРЕЙТИ НА САЙТ
-          </button>
+          </a>
         </div>
       </div>
-      <!-- по ТЗ не используется, но лучше сверстать -->
       <div class="popup-layout__success-field">
         <div class="success">
           <button class="success__close-btn"></button>
@@ -218,7 +212,6 @@
           </button>
         </div>
       </div>
-      <!-- сообщение данные сохранены -->
       <div class="popup-layout__saved">
         <div class="saved">
           <button class="saved__close-btn" type="button"></button>
