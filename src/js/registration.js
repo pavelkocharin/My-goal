@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция модального окна "регистрация"
 
 (function () {
@@ -31,7 +31,8 @@
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
           menuMobileGroup.removeChild(entryForm);
           menuMobileGroup.removeChild(menu);
-        }
+        };
+
         window.onresize = function() {
           if (registrationField.classList.contains(registrationFieldActive) && document.body.clientWidth > 830) {
             menu.classList.remove(menuActive);
@@ -39,17 +40,17 @@
             popup.classList.add(popupActive);
             headerNav.appendChild(menu);
             headerTop.appendChild(entryForm);
-          }
-        }
+          };
+        };
       });
 
       if (registrationCloseBtn) {
         registrationCloseBtn.addEventListener( 'click', function (){
           popup.classList.remove(popupActive);
           registrationField.classList.remove(registrationFieldActive);
-        })
-      }
-    })
-  }
+        });
+      };
+    });
+  };
 
 }()); 

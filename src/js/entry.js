@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция модального окна "вход"
 
 (function () {
@@ -39,17 +39,17 @@
             popup.classList.add(popupActive);
             headerNav.appendChild(menu);
             headerTop.appendChild(entryForm);
-          }
-        }
+          };
+        };
       });
 
       if (entryCloseBtn) {
         entryCloseBtn.addEventListener( 'click', function (){
           popup.classList.remove(popupActive);
           entryField.classList.remove(entryFieldActive);
-        })
-      }
-    })
-  }
+        });
+      };
+    });
+  };
 
 }()); 

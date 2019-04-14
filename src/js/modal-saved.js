@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция модального окна "данные сохранены" страницы личного кабинета
 
 (function () {
@@ -17,21 +17,21 @@
         event.preventDefault();
         popup.classList.add(popupActive);
         savedField.classList.add(popupSavedActive);
-      })
+      });
     });
-  }
+  };
   
   if (saveCloseBtn) {
     saveCloseBtn.addEventListener( 'click', function (){
       popup.classList.remove(popupActive);
       savedField.classList.remove(popupSavedActive);
-    })
-  }
+    });
+  };
   
   if (continueBtn) {
     continueBtn.addEventListener( 'click', function (){
       location.href='profile.html';
-    })
+    });
   };
   
 }());

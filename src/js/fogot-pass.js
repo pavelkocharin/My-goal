@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция восстановления пароля модальные окна на кнопки "забыли пароль" и "далее"
 
 (function () {
@@ -29,14 +29,14 @@
       popup.classList.remove(popupActive);
       recoveryField.classList.remove(recoveryFieldActive);
       newPassField.classList.add()
-    })
+    });
   };
 
   if (newPassBtn) {
     newPassBtn.addEventListener( 'click', function (){
       recoveryField.classList.remove(recoveryFieldActive);
       newPassField.classList.add(newPassFieldActive);
-    })
+    });
   };
 
   if (newPassCloseBtn) {
@@ -45,7 +45,7 @@
       closeMobileMenu.classList.add(closeMobileMenuUnactive);
       recoveryField.classList.remove(recoveryFieldActive);
       newPassField.classList.remove(newPassFieldActive);
-    })
-  }
+    });
+  };
 
-})()
+})();

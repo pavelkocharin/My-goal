@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция модального окна "меню" мобильной версии сайта
 
 (function () {
@@ -31,9 +31,9 @@
           popup.classList.remove(popupActive);
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
-        }
-      }
-    })
+        };
+      };
+    });
   };
 
   if (closeMobileMenu) {
@@ -42,7 +42,7 @@
       menu.classList.remove(menuActive);
       entryForm.classList.remove(entryFormActive);
       menuStyle.display == "block";
-    })
-  }
+    });
+  };
 
 }());

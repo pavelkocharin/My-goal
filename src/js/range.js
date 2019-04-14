@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //функция ползунка range страницы Цели
 
 (function () {
@@ -11,10 +11,9 @@
   var rangeItemActive;
   function getActiveItem() {
     rangeItemActive = document.querySelector(ItemActive);
-  }
+  };
   
   if (BtnPlus) {
-
     rangeItems.forEach(function(elem) {
       elem.addEventListener( 'click', function () {
         getActiveItem();
@@ -23,8 +22,8 @@
           rangeItemActive.classList.remove(activeClass);
         } else {
           return null;
-        }
-      })
+        };
+      });
     });
 
     BtnPlus.addEventListener('click', function() {
@@ -34,7 +33,7 @@
         rangeItemActive.nextElementSibling.classList.add(activeClass);
       } else {
         return null;
-      }
+      };
     });
     
     BtnMinus.addEventListener('click', function() {
@@ -44,9 +43,9 @@
         rangeItemActive.previousElementSibling.classList.add(activeClass);
       } else {
         return null;
-      }
+      };
     });
   } else {
     return null;
-  }
+  };
 })();
