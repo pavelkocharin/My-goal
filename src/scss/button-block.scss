@@ -31,10 +31,10 @@
     font-family: 'FuturaPTBook';
     font-size: 1.13rem;
   }
-}
 
-.button-block--main-questions {
-  margin-bottom: 1.1rem;
+  &--main-questions {
+    margin-bottom: 1.1rem;
+  }
 }
 
 @media (max-width: 830px) {

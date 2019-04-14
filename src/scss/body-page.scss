@@ -10,7 +10,6 @@ html {
   font-family: "Century gothic";
   color: $first-grey; 
   
-//на страницы с возможно малым контентом для заниятия 100 % высоты
   &--short {
     display: flex;
     flex-direction: column;

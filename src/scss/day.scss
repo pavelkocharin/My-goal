@@ -43,11 +43,11 @@
     border: none;
     background-color: transparent;
     margin: 0;
+    cursor: pointer;
     text-decoration: underline;
     font-size: 15px;
     font-family: 'FuturaPTBook';
     color: $button-color;
-    cursor: pointer;
   }
 
   &__goal-result-show:hover {
@@ -59,11 +59,11 @@
     border: none;
     outline: none;
     margin: 8px auto 13px;
+    cursor: pointer;
     text-decoration: underline;
     font-size: 16px;
     font-family: 'FuturaPTBook';
     color: $second-grey;
-    cursor: pointer;
   }
 
   &__close-btn:hover {
@@ -76,13 +76,13 @@
     border-radius: 30px;
     background-color: $button-color;
     margin: 3px auto 0;
+    cursor: pointer;
     width: 125px;
     height: 28px;
     text-transform: uppercase;
     font-family: 'FuturaPTBook';
     font-size: .7rem;
     color: #fff;
-    cursor: pointer;
   }
 
   &__goal-result-select-goals:hover {

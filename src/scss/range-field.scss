@@ -27,10 +27,10 @@
 
   &__item {
     padding: 13px 10px;
+    cursor: pointer;
     font-family: 'FuturaPTDemi';
     font-size: 14px;
     color: $second-grey;
-    cursor: pointer;
   }
 
   &__item--active {
@@ -45,12 +45,12 @@
     border-radius: 8px;
     margin: 5px 8px;
     padding: 0;
+    cursor: pointer;
     width: 16px;
     height: 16px;
     font-size: 14px;
     font-weight: bold;
     color: #fff;
-    cursor: pointer;
   }
 }
 

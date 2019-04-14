@@ -11,13 +11,13 @@
     border-radius: 30px;
     background-color: $button-color;
     margin-bottom: 5px;
+    cursor: pointer;
     width: 12.5rem;
     height: 3.7rem;
     text-transform: uppercase;
     font-family: 'FuturaPTDemi';
     font-size: .95rem;
     color: #fff;
-    cursor: pointer;
   }
 
     &__save-day-btn:hover {
@@ -47,11 +47,11 @@
     border: none;
     outline: none;
     margin-bottom: 15px;
+    cursor: pointer;
     text-decoration: underline;
     font-size: 18px;
     font-family: 'FuturaPTMedium';
     color: $second-grey;
-    cursor: pointer;
   }
 
   &__edit-day-btn:hover {

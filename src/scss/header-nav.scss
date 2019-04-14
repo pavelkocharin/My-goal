@@ -13,12 +13,12 @@
   }
 
   &__mobile-btn:before { 
-    content: ""; 
     position: absolute; 
     top: .35rem; 
     left: 0; 
-    width: 100%; 
     border-top: 0.25rem solid #fff; 
+    width: 100%; 
+    content: ""; 
   }
 
   &__list {
@@ -42,16 +42,13 @@
   &__link--underline {
     text-decoration: underline;
   }
-
 }
-
 
 @media (max-width: 830px) {
   .header-nav {
-
     &__mobile-btn {
       display: block;
-  }
+    }
 
     &__list {
       display: none;

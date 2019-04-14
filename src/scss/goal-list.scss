@@ -28,11 +28,11 @@
     position: relative;
     user-select: none;
     margin-bottom: 10px;
+    cursor: pointer;
     width: 80%;
     line-height: 20px;
     font-size: 1rem;
     font-family: 'FuturaPTBook';
-    cursor: pointer;
   }
 
   &__item-label:hover &__item-checkbox ~ &__item-checkmark {
@@ -42,9 +42,9 @@
   &__item-checkbox {
     position: absolute;
     opacity: 0;
+    cursor: pointer;
     height: 0;
     width: 0;
-    cursor: pointer;
   }
 
   &__item-checkmark {

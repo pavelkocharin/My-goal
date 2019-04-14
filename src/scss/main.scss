@@ -148,11 +148,11 @@
     background-color: transparent;
     margin: 0;
     padding: 0;
+    cursor: pointer;
     text-decoration: underline;
     color: inherit;
     font-family: 'FuturaPTBook';
     font-size: 20px;
-    cursor: pointer;
   }
 
   &__goals-status-link:hover {
@@ -343,6 +343,3 @@
     }
   }
 }
-    
-
-  

@@ -64,7 +64,6 @@
   }
 
   &__content-text--tel::before {
-    content: '';
     display: block;
     position: absolute;
     left: 1.75rem;
@@ -75,10 +74,10 @@
     background-size: contain;
     width: 16px;
     height: 16px;
+    content: '';
   }
 
   &__content-text--mail::before {
-    content: '';
     display: block;
     position: absolute;
     left: 1.75rem;
@@ -89,6 +88,7 @@
     background-size: contain;
     width: 16px;
     height: 16px;
+    content: '';
   }
 
   &__bottom {
@@ -125,7 +125,6 @@
  
 @media (max-width: 1060px) { 
   .footer {
-
     &__content {
       max-width: 100%;
     } 
@@ -146,33 +145,32 @@
   }
 }  
 
-//адаптация под отступы
 @media (max-width: 960px) {
   .footer__content {
     justify-content: center;
   }
 }
 
-//адаптация меню навигации под макеты
 @media (max-width: 738px) {
-  .footer__content-item:nth-child(3) {
-    order: 5;
-    width: 100%;
-    align-items: center;
-  }
+  .footer {
+    &__content-item:nth-child(3) {
+      order: 5;
+      width: 100%;
+      align-items: center;
+    }
 
-  .footer__content-item:nth-child(4) {
-    order: 3;
-  }
+    &__content-item:nth-child(4) {
+      order: 3;
+    }
 
-  .footer__content-item:nth-child(5) {
-    order: 4;
-  }
+    &__content-item:nth-child(5) {
+      order: 4;
+    }
+  } 
 }
 
 @media (max-width: 830px)  {
   .footer {
-
     &__logo {
       padding: 1.58rem 0 1.15rem;
     }
@@ -225,21 +223,18 @@
   }
 }
 
-//убираем отдаление от правой границы до сюлижения с границей
 @media (min-width: 768px) {
   .footer__payments-link:last-child {
     margin-right: 0;
   }
 }
 
-//выравнивание по центру с учётом псевдоэлементов
 @media (max-width: 680px) {
   .footer__content-item--contact {
     margin-left: 30px;
   }
 }
 
-//защита от переноса слов в меню футера на малых телефонах
 @media (max-width: 340px) {
   .footer__content-item--mobile {
     padding: 5px 0px;
