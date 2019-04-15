@@ -1,6 +1,6 @@
 @import 'variables';
 
-.entry {
+.login {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -108,11 +108,11 @@
 }
 
 @media (max-width: 830px) {
-  .entry {
+  .login {
     width: 470px;
     height: 370px;
-    top: calc(50%-185px);
-    left: calc(50%-235px);
+    top: calc(50% - 185px);
+    left: calc(50% - 235px);
   
     &__title {
       margin: 35px 0 16px;
@@ -145,9 +145,9 @@
 }
 
 @media (max-width: 500px) {
-  .entry {
+  .login {
     width: 90vw;
-    top: calc(50%-185px);
+    top: calc(50% - 185px);
     left: calc(50% - 90vw * .5);
       
     &__input {

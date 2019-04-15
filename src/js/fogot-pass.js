@@ -7,9 +7,9 @@
   var recoveryField = document.querySelector('.popup-layout__recovery-field');
   var recoveryFieldActive = 'popup-layout__recovery-field--active';
   var recoveryCloseBtn = document.querySelector('.recovery__close-btn');
-  var recoveryBtn = document.querySelector('.entry__button-recovery');
-  var entryField = document.querySelector('.popup-layout__entry-field');
-  var entryFieldActive = 'popup-layout__entry-field--active';
+  var recoveryBtn = document.querySelector('.login__button-recovery');
+  var loginField = document.querySelector('.popup-layout__login-field');
+  var loginFieldActive = 'popup-layout__login-field--active';
   var newPassCloseBtn = document.querySelector('.new-pass__close-btn');
   var newPassBtn = document.querySelector('.recovery__button');
   var newPassField = document.querySelector('.popup-layout__message-pass-field');
@@ -19,7 +19,7 @@
 
   if (recoveryBtn) {
     recoveryBtn.addEventListener( 'click', function (){
-      entryField.classList.remove(entryFieldActive);
+      loginField.classList.remove(loginFieldActive);
       recoveryField.classList.add(recoveryFieldActive);
     });
   };

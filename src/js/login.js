@@ -10,43 +10,43 @@
   var menuMobileGroup = document.querySelector('.popup-layout__popup-menu');
   var menu = document.querySelector('.header-nav__list');
   var menuActive = 'header-nav__list--active';
-  var entryForm = document.querySelector('.header-form');
-  var entryFormActive = 'header-form--active';
+  var loginForm = document.querySelector('.header-form');
+  var loginFormActive = 'header-form--active';
   var headerNav = document.querySelector('.header-nav');
   var headerTop = document.querySelector('.header__top-content');
-  var entryCloseBtn = document.querySelector('.entry__close-btn');
-  var entryBtn = document.querySelectorAll('.header-form__btn--entry, .main__goals-status-link-entry');
-  var entryField = document.querySelector('.popup-layout__entry-field');
-  var entryFieldActive = 'popup-layout__entry-field--active';
+  var loginCloseBtn = document.querySelector('.login__close-btn');
+  var loginBtn = document.querySelectorAll('.header-form__btn--login, .main__goals-status-link-login');
+  var loginField = document.querySelector('.popup-layout__login-field');
+  var loginFieldActive = 'popup-layout__login-field--active';
 
-  if (entryBtn) {
-    entryBtn.forEach(function(elem) {
+  if (loginBtn) {
+    loginBtn.forEach(function(elem) {
       elem.addEventListener( 'click', function (){
         if (!popup.classList.contains (popupActive)) {
           popup.classList.add(popupActive);
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
-          entryField.classList.add(entryFieldActive);
+          loginField.classList.add(loginFieldActive);
         } else {
-          entryField.classList.add(entryFieldActive);
+          loginField.classList.add(loginFieldActive);
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
-          menuMobileGroup.removeChild(entryForm);
+          menuMobileGroup.removeChild(loginForm);
           menuMobileGroup.removeChild(menu);
         };
         window.onresize = function() {
-          if (entryField.classList.contains(entryFieldActive) && document.body.clientWidth > 830) {
+          if (loginField.classList.contains(loginFieldActive) && document.body.clientWidth > 830) {
             menu.classList.remove(menuActive);
-            entryForm.classList.remove(entryFormActive);
+            loginForm.classList.remove(loginFormActive);
             popup.classList.add(popupActive);
             headerNav.appendChild(menu);
-            headerTop.appendChild(entryForm);
+            headerTop.appendChild(loginForm);
           };
         };
       });
 
-      if (entryCloseBtn) {
-        entryCloseBtn.addEventListener( 'click', function (){
+      if (loginCloseBtn) {
+        loginCloseBtn.addEventListener( 'click', function (){
           popup.classList.remove(popupActive);
-          entryField.classList.remove(entryFieldActive);
+          loginField.classList.remove(loginFieldActive);
         });
       };
     });

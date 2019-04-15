@@ -22,7 +22,7 @@
   if (registrationBtn) {
     registrationBtn.forEach(function(elem) {
       elem.addEventListener( 'click', function (){
-        if (!popup.classList.contains (popupActive)) {
+        if (!popup.classList.contains(popupActive)) {
           popup.classList.add(popupActive);
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
           registrationField.classList.add(registrationFieldActive);

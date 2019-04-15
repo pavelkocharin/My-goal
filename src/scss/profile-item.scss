@@ -8,7 +8,7 @@
   border-right: 1px solid #e6e6e6;
   border-top: 1px solid #e6e6e6;
   padding: 40px 50px;
-  width: calc(50%-2px);
+  width: calc(50% - 2px);
   max-width: 398px;
 
   &:first-child {
@@ -87,7 +87,7 @@
     font-size: 18px;
     color: $first-grey;
     appearance: none;
-    background-image: url('../img/index/select-arrow.png');
+    background-image: url(../img/index/select-arrow.png);
     background-position: 92% 50%;
     background-repeat: no-repeat;
   }
@@ -192,7 +192,7 @@
 @media (max-width: 830px)  {
   .profile-item{
     padding: 24px 20px 36px;
-    width: calc(100%-40px);
+    width: calc(100% - 40px);
     max-width: 500px;
   
     &__title {
@@ -230,7 +230,7 @@
   @media (max-width: 475px)  {
     .profile-item{
       padding: 24px 15px 40px;
-      width: calc(100%-30px);
+      width: calc(100% - 30px);
 
       &__form-input {
         width: 240px;

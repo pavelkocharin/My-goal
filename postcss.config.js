@@ -3,8 +3,10 @@
 module.exports = {
   plugins: [
     require('autoprefixer'),
-    require('css-mqpacker'),
-    require('cssnano')({
+    require('css-mqpacker')
+    //отключение минификатора css
+    // require('cssnano')
+    ({
       preset: [
         'default', {
           discardComments: {

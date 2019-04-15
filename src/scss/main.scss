@@ -67,7 +67,7 @@
   }
 
   &__clouds {
-    background-image: url('../img/index/clouds.png');
+    background-image: url(../img/index/clouds.png);
     background-repeat: repeat;
     background-size: auto;
     margin-bottom: 35px;
@@ -110,7 +110,7 @@
     flex-direction: column;
     align-items: center;
     margin: 0 15px;
-    width: calc(100%-30px);
+    width: calc(100% - 30px);
     max-width: 1000px;
   }
 
@@ -307,7 +307,7 @@
       flex-direction: column;
       justify-content: center;
       padding: 0 30px;
-      width: calc(100%-60px);
+      width: calc(100% - 60px);
     }
 
     &__goals-status-text {

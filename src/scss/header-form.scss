@@ -23,12 +23,12 @@
     border: 1px solid #fff;
   }
 
-  &__btn--entry {
+  &__btn--login {
     border: 1px solid #fff;
     margin: 0 0 0 2px;
   }
 
-  &__btn--reg:hover ~ &__btn--entry {
+  &__btn--reg:hover ~ &__btn--login {
     border-color: transparent;
   }
 
@@ -48,7 +48,7 @@
     position: absolute;
     left: 0;
     bottom: .45rem;
-    background-image: url("../img/index/profile-icon.png");
+    background-image: url(../img/index/profile-icon.png);
     background-repeat: no-repeat;
     width: 1.25rem;
     height: 1.25rem;
@@ -70,7 +70,7 @@
     position: absolute;
     right: -.6rem;
     bottom: .2rem;
-    background-image: url("../img/index/x.png");
+    background-image: url(../img/index/x.png);
     background-repeat: no-repeat;
     width: 1.25rem;
     height: 1.25rem;
@@ -104,7 +104,7 @@
       padding: 0;
     }
   
-    &__btn--entry {
+    &__btn--login {
       border: 1px solid #fff;
       margin-top: 22px;
       padding: 5px 25px;
@@ -112,7 +112,7 @@
       font-size: .95rem;
     }
   
-    &__btn--reg:hover ~ &__btn--entry {
+    &__btn--reg:hover ~ &__btn--login {
       border-color: #fff;
     }
 

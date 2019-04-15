@@ -17,7 +17,7 @@
   &__popup-menu {
     position: absolute;
     top: 0;
-    left: calc(50%-150px);
+    left: calc(50% - 150px);
     display: flex;
     flex-direction: column;
     margin-top: 47px;
@@ -62,8 +62,8 @@
 
   &__registration-field {
     position: absolute;
-    top: calc(50%-220px);
-    left: calc(50%-300px);
+    top: calc(50% - 220px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 440px;
@@ -73,23 +73,23 @@
     display: block;
   }
 
-  &__entry-field {
+  &__login-field {
     position: absolute;
-    top: calc(50%-210px);
-    left: calc(50%-300px);
+    top: calc(50% - 210px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 420px;
   }
 
-  &__entry-field--active {
+  &__login-field--active {
     display: block;
   }
 
   &__recovery-field {
     position: absolute;
-    top: calc(50%-185px);
-    left: calc(50%-300px);
+    top: calc(50% - 185px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 370px;
@@ -101,8 +101,8 @@
 
   &__message-pass-field {
     position: absolute;
-    top: calc(50%-120px);
-    left: calc(50%-300px);
+    top: calc(50% - 120px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 240px;
@@ -114,8 +114,8 @@
 
   &__success-field {
     position: absolute;
-    top: calc(50%-150px);
-    left: calc(50%-300px);
+    top: calc(50% - 150px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 300px;
@@ -127,8 +127,8 @@
 
   &__saved {
     position: absolute;
-    top: calc(50%-100px);
-    left: calc(50%-300px);
+    top: calc(50% - 100px);
+    left: calc(50% - 300px);
     display: none;
     width: 600px;
     height: 200px;

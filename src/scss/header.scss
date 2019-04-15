@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-image: url('../img/index/header.png');
+  background-image: url(../img/index/header.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -32,7 +32,7 @@
     top: 0; 
     bottom: 0;
     z-index: -1;
-    background: url('../img/index/header-top.png');
+    background: url(../img/index/header-top.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

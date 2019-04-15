@@ -18,7 +18,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  assets: 'assets/'
+  assets: './'
 }
 
 module.exports = {
@@ -43,7 +43,8 @@ module.exports = {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: 'assets/img/index/[name].[ext]'
+        name: '../img/index/[name].[ext]',
+        publicPath: '.'
       }
     }, {
       test: /\.scss$/,
@@ -57,7 +58,12 @@ module.exports = {
           options: { sourceMap: true }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `${PATHS.src}../postcss.config.js` } }
+          options: { 
+            sourceMap: true, 
+            config: { path: `${PATHS.src}../postcss.config.js` },
+            //отключение минификации полностью css файлов (и автопрефиксера)
+            //minifySelectors: false,
+          }
         }, {
           loader: 'sass-loader',
           options: { sourceMap: true }
@@ -81,8 +87,8 @@ module.exports = {
       use: {
         loader: 'file-loader',
         options: {
-          name: 'assets/fonts/[name][hash].[ext]',
-           publicPath: '../../'
+          name: '../fonts/[name][hash].[ext]',
+           publicPath: './'
         }
       }
     }]
@@ -91,7 +97,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].css`,
     }),
-    // Copy HtmlWebpackPlugin and change index.html for another html page
     new HtmlWebpackPlugin({
       hash: false,
       template: `${PATHS.src}/index.html`,
@@ -152,4 +157,8 @@ module.exports = {
       { from: `${PATHS.src}/static`, to: '' },
     ])
   ],
+  //отключение минификации js файлов
+  optimization: {
+    minimize: false
+  }
 }

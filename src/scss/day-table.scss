@@ -46,11 +46,11 @@
   .day-table {
     flex-direction: column;
     border: 2px solid $table-border;
-    width: calc(100%-4px);
+    width: calc(100% - 4px);
 
     &__column {
       padding: 8px 15px;
-      width: calc(100%-30px);
+      width: calc(100% - 30px);
       border-top: 2px solid $table-border;
       border-left: none;
       border-right: none;

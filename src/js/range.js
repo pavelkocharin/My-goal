@@ -45,7 +45,5 @@
         return null;
       };
     });
-  } else {
-    return null;
   };
 })();
