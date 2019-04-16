@@ -22,7 +22,6 @@ const PATHS = {
 }
 
 module.exports = {
-  // BASE config
   externals: {
     paths: PATHS
   },
@@ -61,8 +60,6 @@ module.exports = {
           options: { 
             sourceMap: true, 
             config: { path: `${PATHS.src}../postcss.config.js` },
-            //отключение минификации полностью css файлов (и автопрефиксера)
-            //minifySelectors: false,
           }
         }, {
           loader: 'sass-loader',
