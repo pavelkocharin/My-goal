@@ -22,6 +22,7 @@ const PATHS = {
 }
 
 module.exports = {
+  // BASE config
   externals: {
     paths: PATHS
   },
@@ -42,8 +43,8 @@ module.exports = {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '../img/index/[name].[ext]',
-        publicPath: '.'
+        name: './img/index/[name].[ext]',
+        publicPath: '../'
       }
     }, {
       test: /\.scss$/,
@@ -60,6 +61,8 @@ module.exports = {
           options: { 
             sourceMap: true, 
             config: { path: `${PATHS.src}../postcss.config.js` },
+            //отключение минификации полностью css файлов (и автопрефиксера)
+            //minifySelectors: false,
           }
         }, {
           loader: 'sass-loader',
@@ -84,8 +87,8 @@ module.exports = {
       use: {
         loader: 'file-loader',
         options: {
-          name: '../fonts/[name][hash].[ext]',
-           publicPath: './'
+          name: './fonts/[name][hash].[ext]',
+           publicPath: '../'
         }
       }
     }]
