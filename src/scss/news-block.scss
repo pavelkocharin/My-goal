@@ -54,9 +54,9 @@
     border: 1px solid #e1e1e1;
     border-top: none;
     margin-top: -4px;
-    padding-left: 27px;
+    padding: 0 1px 0 27px;
     max-width: 971px;
-    width: calc(100vw - 59px);
+    width: inherit;
   }
 
   &__link {

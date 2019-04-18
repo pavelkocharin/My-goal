@@ -101,6 +101,7 @@
 
     &__results-mobile {
       display: block;
+      max-width: calc(100vw - 60px);
     }
 
     &__section {
@@ -109,6 +110,7 @@
 
     &__goal-result-short {
       margin-bottom: 0;
+      padding-right: 5px;
     }
 
     &__close-btn {

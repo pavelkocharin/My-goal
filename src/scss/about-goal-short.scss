@@ -3,6 +3,7 @@
 .about-goal-short {
   display: flex;
   flex-direction: column;
+  width: 100%;
   font-size: 1rem;
   font-family: 'FuturaPTBook';
   color: $table-border;
@@ -36,6 +37,10 @@
 
     &__status-number {
       padding-right: 5px;
+    }
+
+    &__goal-description {
+      max-width: inherit;
     }
 
     &__goal-status {
