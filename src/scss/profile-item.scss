@@ -7,7 +7,7 @@
   align-items: center;
   border-right: 1px solid #e6e6e6;
   border-top: 1px solid #e6e6e6;
-  padding: 40px 50px;
+  padding: 40px 40px;
   width: calc(50% - 2px);
   max-width: 398px;
 
@@ -55,6 +55,8 @@
   &__text {
     margin: 0 0 10px;
     line-height: 26px;
+    width: calc(100vw - 30px);
+    max-width: 368px;
     text-align: center;
     font-family: 'FuturaPTBook';
     font-size: 20px;
@@ -90,6 +92,10 @@
     background-image: url(../img/index/select-arrow.png);
     background-position: 92% 50%;
     background-repeat: no-repeat;
+  }
+
+  &__form-select::-ms-expand {
+    display: none;
   }
 
   &__form-option {
@@ -180,7 +186,7 @@
 }
 
 @media (max-width: 1029px)  {
-  .profile-item{
+  .profile-item {
     border-left: 1px solid #e6e6e6;
 
     &:nth-child(3) {

@@ -7,7 +7,7 @@
   var popupActive = 'popup-layout--active';
   var registrationFieldActive = 'popup-layout__registration-field--active';
   var registrationCloseBtn = document.querySelector('.registration__close-btn');
-  var registrationBtn = Array.from(document.querySelectorAll('.header-form__btn--reg, .main__goals-status-link-reg'));
+  var registrationBtn = document.querySelectorAll('.header-form__btn--reg, .main__goals-status-link-reg');
   var registrationField = document.querySelector('.popup-layout__registration-field');
   var closeMobileMenu = document.querySelector('.popup-layout__popup-menu-close');
   var closeMobileMenuUnactive = 'popup-layout__popup-menu-close--unactive';
@@ -20,7 +20,7 @@
   var headerTop = document.querySelector('.header__top-content');
 
   if (registrationBtn) {
-    registrationBtn.forEach(function(elem) {
+    Array.prototype.forEach.call(registrationBtn, function (elem) {
       elem.addEventListener( 'click', function (){
         if (!popup.classList.contains(popupActive)) {
           popup.classList.add(popupActive);

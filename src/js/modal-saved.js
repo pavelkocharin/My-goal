@@ -4,7 +4,7 @@
 (function () {
   var popup = document.querySelector('.popup-layout');
   var saveBtnClass = '.profile-item__form-button';
-  var saveBtn = Array.from(document.querySelectorAll(saveBtnClass));
+  var saveBtn = document.querySelectorAll(saveBtnClass);
   var savedField = document.querySelector('.popup-layout__saved');
   var saveCloseBtn = document.querySelector('.saved__close-btn');
   var continueBtn = document.querySelector('.saved__button');
@@ -12,7 +12,7 @@
   var popupSavedActive = 'popup-layout__saved--active';
 
   if (saveBtn) {
-    saveBtn.forEach(function(elem) {
+    Array.prototype.forEach.call(saveBtn, function (elem) {
       elem.addEventListener( 'click', function (event){
         event.preventDefault();
         popup.classList.add(popupActive);

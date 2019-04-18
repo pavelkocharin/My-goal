@@ -1,29 +1,59 @@
 @font-face {
   font-family: 'ZingScriptRustSBDemo';
-  src: url(../fonts/ZingScriptRustSBDemo-Base.otf);
+  src: local('ZingScriptRustSBDemo'),
+      // url(../fonts/ZingScriptRustSBDemo-Base.eot),
+      //url(../fonts/ZingScriptRustSBDemo-Base.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/ZingScriptRustSBDemo-Base.woff)format('woff'),
+      url(../fonts/ZingScriptRustSBDemo-Base.ttf)format('truetype'),
+      url(../fonts/ZingScriptRustSBDemo-Base.otf);     
 }
 
 @font-face {
   font-family: 'FuturaPTMedium';
-  src: url(../fonts/FuturaPTMedium.otf);
+  src: local('FuturaPTMedium'),
+      url(../fonts/FuturaPTMedium.eot),
+      url(../fonts/FuturaPTMedium.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/FuturaPTMedium.woff)format('woff'),
+      url(../fonts/FuturaPTMedium.ttf)format('truetype'),
+      url(../fonts/FuturaPTMedium.otf);  
 }
 
 @font-face {
   font-family: 'FuturaPTBold';
-  src: url(../fonts/FuturaPTBold.otf);
+  src: local('FuturaPTBold'),
+      url(../fonts/FuturaPTBold.eot),
+      url(../fonts/FuturaPTBold.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/FuturaPTBold.woff)format('woff'),
+      url(../fonts/FuturaPTBold.ttf)format('truetype'),
+      url(../fonts/FuturaPTBold.otf);
 }
 
 @font-face {
   font-family: 'FuturaPTBook';
-  src: url(../fonts/FuturaPTBook.otf);
+  src: local('FuturaPTBook'),
+      url(../fonts/FuturaPTBook.eot),
+      url(../fonts/FuturaPTBook.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/FuturaPTBook.woff)format('woff'),
+      url(../fonts/FuturaPTBook.ttf)format('truetype'),
+      url(../fonts/FuturaPTBook.otf);
 }
 
 @font-face {
   font-family: 'FuturaPTHeavy';
-  src: url(../fonts/FuturaPTHeavy.otf);
+  src: local('FuturaPTHeavy'),
+      url(../fonts/FuturaPTHeavy.eot),
+      url(../fonts/FuturaPTHeavy.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/FuturaPTHeavy.woff)format('woff'),
+      url(../fonts/FuturaPTHeavy.ttf)format('truetype'),
+      url(../fonts/FuturaPTHeavy.otf);
 }
 
 @font-face {
   font-family: 'FuturaPTDemi';
-  src: url(../fonts/FuturaPTDemi.otf);
+  src: local('FuturaPTDemi'),
+      url(../fonts/FuturaPTDemi.eot),
+      url(../fonts/FuturaPTDemi.eot?#iefix)format('embedded-opentype'),
+      url(../fonts/FuturaPTDemi.woff)format('woff'),
+      url(../fonts/FuturaPTDemi.ttf)format('truetype'),
+      url(../fonts/FuturaPTDemi.otf);
 }

@@ -140,6 +140,11 @@ module.exports = {
       template: `${PATHS.src}/payment.html`,
       filename: './payment.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/news.html`,
+      filename: './news.html'
+    }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },

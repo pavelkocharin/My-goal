@@ -4,7 +4,7 @@
 (function () {
   var activeClass = 'range-field__item--active';
   var ItemActive = '.range-field__item--active'; 
-  var rangeItems = Array.from(document.querySelectorAll('.range-field__item'));
+  var rangeItems = document.querySelectorAll('.range-field__item');
   var BtnMinus = document.querySelector('.range-field__btn--min');
   var BtnPlus = document.querySelector('.range-field__btn--plus');
   
@@ -14,7 +14,7 @@
   };
   
   if (BtnPlus) {
-    rangeItems.forEach(function(elem) {
+    Array.prototype.forEach.call(rangeItems, function (elem) {
       elem.addEventListener( 'click', function () {
         getActiveItem();
         if (elem !== rangeItemActive) {

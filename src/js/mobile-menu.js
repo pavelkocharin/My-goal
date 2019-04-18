@@ -31,6 +31,9 @@
           popup.classList.remove(popupActive);
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
+        } else if (!popup.classList.contains(popupActive) && document.body.clientWidth > 830) {
+          headerNav.appendChild(menu);
+          headerTop.appendChild(entryForm);
         };
       };
     });

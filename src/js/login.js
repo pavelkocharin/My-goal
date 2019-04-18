@@ -15,12 +15,12 @@
   var headerNav = document.querySelector('.header-nav');
   var headerTop = document.querySelector('.header__top-content');
   var loginCloseBtn = document.querySelector('.login__close-btn');
-  var loginBtn = document.querySelectorAll('.header-form__btn--login, .main__goals-status-link-login');
+  var loginBtn = document.querySelectorAll('.header-form__btn--login, .main__goals-status-link--login');
   var loginField = document.querySelector('.popup-layout__login-field');
   var loginFieldActive = 'popup-layout__login-field--active';
 
   if (loginBtn) {
-    loginBtn.forEach(function(elem) {
+    Array.prototype.forEach.call(loginBtn, function(elem) {
       elem.addEventListener( 'click', function (){
         if (!popup.classList.contains (popupActive)) {
           popup.classList.add(popupActive);
