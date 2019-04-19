@@ -94,7 +94,7 @@
 (function () {
   var activeClass = 'range-field__item--active';
   var ItemActive = '.range-field__item--active';
-  var rangeItems = Array.from(document.querySelectorAll('.range-field__item'));
+  var rangeItems = document.querySelectorAll('.range-field__item');
   var BtnMinus = document.querySelector('.range-field__btn--min');
   var BtnPlus = document.querySelector('.range-field__btn--plus');
   var rangeItemActive;
@@ -106,7 +106,7 @@
   ;
 
   if (BtnPlus) {
-    rangeItems.forEach(function (elem) {
+    Array.prototype.forEach.call(rangeItems, function (elem) {
       elem.addEventListener('click', function () {
         getActiveItem();
 
@@ -159,7 +159,7 @@
 (function () {
   var popup = document.querySelector('.popup-layout');
   var saveBtnClass = '.profile-item__form-button';
-  var saveBtn = Array.from(document.querySelectorAll(saveBtnClass));
+  var saveBtn = document.querySelectorAll(saveBtnClass);
   var savedField = document.querySelector('.popup-layout__saved');
   var saveCloseBtn = document.querySelector('.saved__close-btn');
   var continueBtn = document.querySelector('.saved__button');
@@ -167,7 +167,7 @@
   var popupSavedActive = 'popup-layout__saved--active';
 
   if (saveBtn) {
-    saveBtn.forEach(function (elem) {
+    Array.prototype.forEach.call(saveBtn, function (elem) {
       elem.addEventListener('click', function (event) {
         event.preventDefault();
         popup.classList.add(popupActive);
@@ -208,7 +208,7 @@
   var popupActive = 'popup-layout--active';
   var registrationFieldActive = 'popup-layout__registration-field--active';
   var registrationCloseBtn = document.querySelector('.registration__close-btn');
-  var registrationBtn = Array.from(document.querySelectorAll('.header-form__btn--reg, .main__goals-status-link-reg'));
+  var registrationBtn = document.querySelectorAll('.header-form__btn--reg, .main__goals-status-link-reg');
   var registrationField = document.querySelector('.popup-layout__registration-field');
   var closeMobileMenu = document.querySelector('.popup-layout__popup-menu-close');
   var closeMobileMenuUnactive = 'popup-layout__popup-menu-close--unactive';
@@ -221,7 +221,7 @@
   var headerTop = document.querySelector('.header__top-content');
 
   if (registrationBtn) {
-    registrationBtn.forEach(function (elem) {
+    Array.prototype.forEach.call(registrationBtn, function (elem) {
       elem.addEventListener('click', function () {
         if (!popup.classList.contains(popupActive)) {
           popup.classList.add(popupActive);
@@ -299,6 +299,9 @@
           popup.classList.remove(popupActive);
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
+        } else if (!popup.classList.contains(popupActive) && document.body.clientWidth > 830) {
+          headerNav.appendChild(menu);
+          headerTop.appendChild(entryForm);
         }
 
         ;
@@ -340,12 +343,12 @@
   var headerNav = document.querySelector('.header-nav');
   var headerTop = document.querySelector('.header__top-content');
   var loginCloseBtn = document.querySelector('.login__close-btn');
-  var loginBtn = document.querySelectorAll('.header-form__btn--login, .main__goals-status-link-login');
+  var loginBtn = document.querySelectorAll('.header-form__btn--login, .main__goals-status-link--login');
   var loginField = document.querySelector('.popup-layout__login-field');
   var loginFieldActive = 'popup-layout__login-field--active';
 
   if (loginBtn) {
-    loginBtn.forEach(function (elem) {
+    Array.prototype.forEach.call(loginBtn, function (elem) {
       elem.addEventListener('click', function () {
         if (!popup.classList.contains(popupActive)) {
           popup.classList.add(popupActive);
