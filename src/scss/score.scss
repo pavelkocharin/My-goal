@@ -1,6 +1,8 @@
 @import 'variables';
 
 .score {
+  margin-top: 82px;
+
   &__day-score,
   &__total-score,
   &__range-score {
@@ -90,6 +92,15 @@
 
     &__range-score-text {
       margin: 8px 0 27px;
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
+  .score {
+    &__day-score {
+      width: 100%;
     }
   }
 }

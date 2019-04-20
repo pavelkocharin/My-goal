@@ -82,6 +82,11 @@
       display: none;
     }
 
+    &__column--flex-row {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
     &__column--future {
       flex-direction: row;
       align-items: baseline;
