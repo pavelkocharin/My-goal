@@ -32,7 +32,7 @@
   }
 
   &__goal-result-short--future {
-    margin: -6px auto 5px;
+    margin: 0 auto 5px;
   }
 
   &__goal-result-show {
@@ -119,6 +119,14 @@
 
     &__goal-result-select-goals {
       margin: 0;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .day {
+    &__goal-result-select-goals {
+      height: 35px;
     }
   }
 }

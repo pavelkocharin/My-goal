@@ -8,21 +8,24 @@
   var unactive = 'unactive';
   var unactiveElDayPast = document.querySelectorAll("*[data-id='day1']");
   var unactiveElDayNow = document.querySelectorAll("*[data-id='day2']");
+  var unactiveElDayFuture = document.querySelectorAll("*[data-id='day3']");
+  var unactiveElDayPastAndFuture = document.querySelectorAll("*[data-id='day1'], *[data-id='day3']");
   var dayTableResult = document.querySelectorAll('.day-table__column--mobile-display-none');
   var dayTableResultUnactive = 'day-table__column--mobile-display-none';
   var dayTableResultFlexRow = document.querySelectorAll('.day-table__column--flex-row');
 
   //сворачивание при загрузке страницы прошлого и не наступившего дней
-  for (let el of unactiveElDayPast) {
+  for (let el of unactiveElDayPastAndFuture) {
     el.classList.add(unactive);
   };
   //кнопку посмотреть отобразить
-  if (btnShowDay[0]) {
+  if (btnShowDay[0] || btnShowDay[2]) {
     btnShowDay[0].classList.remove(unactive);
+    btnShowDay[2].classList.remove(unactive);
     // краткие итоги дня отобразить
     dayTableResultFlexRow[0].classList.remove(dayTableResultUnactive);
+    dayTableResultFlexRow[2].classList.remove(dayTableResultUnactive);
   }
-  
   
   
   //проверка на развёрнутость дня, если развёрнутo - сворачиваем 
@@ -47,6 +50,12 @@
             btnShowDay.classList.remove(unactive);
             dayTableResultFlexRow[1].classList.remove(dayTableResultUnactive);
           }
+        } else if (attrBtnClose == 'day3-close') {
+          for (let el of unactiveElDayFuture) {
+            el.classList.add(unactive);
+            btnShowDay.classList.remove(unactive);
+            dayTableResultFlexRow[2].classList.remove(dayTableResultUnactive);
+          }
         }
       })
     };
@@ -70,10 +79,15 @@
             el.classList.remove(unactive);
             dayTableResult[1].classList.remove(dayTableResultUnactive);
             dayTableResultFlexRow[1].classList.add(dayTableResultUnactive);
+          };
+        } else if (attrBtnShow == 'day3-close') {
+          for (let el of unactiveElDayFuture) {
+            el.classList.remove(unactive);
+            dayTableResult[2].classList.remove(dayTableResultUnactive);
+            dayTableResultFlexRow[2].classList.add(dayTableResultUnactive);
           }
         };
         elem.classList.add(unactive);
-
       })
     })
   }

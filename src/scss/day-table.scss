@@ -11,10 +11,6 @@
     padding: 15px 13px;
   }
 
-  &__column--future {
-    padding-bottom: 10px;
-  }
-
   &__column:nth-child(2) {
     border-left: 2px solid $table-border;
     border-right: 2px solid $table-border;
@@ -39,6 +35,10 @@
 
   &__column-title--empty {
     visibility: hidden;
+  }
+
+  &__column-title--empty--future {
+    margin-bottom: 15px;
   }
 }
 

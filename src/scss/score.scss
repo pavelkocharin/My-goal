@@ -3,6 +3,10 @@
 .score {
   margin-top: 82px;
 
+  &--future {
+    margin-top: 58px;
+  }
+
   &__day-score,
   &__total-score,
   &__range-score {
