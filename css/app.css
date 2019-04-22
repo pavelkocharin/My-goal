@@ -1362,6 +1362,8 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .registration__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     background-color: #f5f5f5;
@@ -1370,22 +1372,18 @@ html {
     width: 300px;
     height: 50px; }
   .registration__input::-webkit-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .registration__input:-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .registration__input::-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .registration__input::placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
@@ -1498,6 +1496,8 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .login__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     background-color: #f5f5f5;
@@ -1506,22 +1506,18 @@ html {
     width: 300px;
     height: 46px; }
   .login__input::-webkit-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .login__input:-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .login__input::-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .login__input::placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
@@ -1646,6 +1642,8 @@ html {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .recovery__input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid #e6e6e6;
     background-color: #f5f5f5;
@@ -1654,22 +1652,18 @@ html {
     width: 300px;
     height: 50px; }
   .recovery__input::-webkit-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .recovery__input:-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .recovery__input::-ms-input-placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
   .recovery__input::placeholder {
-    padding-left: 0;
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
@@ -2335,15 +2329,14 @@ html {
     line-height: 1rem;
     font-family: 'FuturaPTBook';
     font-size: 15px; }
-  .day__goal-result-short--open {
-    margin-bottom: 84px; }
   .day__goal-result-short--success {
     color: #20b208; }
   .day__goal-result-short--red {
     color: #dd7fb0; }
   .day__goal-result-short--future {
-    margin: -6px auto 5px; }
+    margin: 0 auto 5px; }
   .day__goal-result-show {
+    display: none;
     border: none;
     background-color: transparent;
     margin: 0;
@@ -2387,6 +2380,21 @@ html {
             box-shadow: 0 0 4px rgba(59, 224, 112, 0.9); }
   .day__results-mobile {
     display: none; }
+  .day--open .goal-list,
+  .day--open .part-result,
+  .day--open .day-table__column-title,
+  .day--open .score,
+  .day--open .day-info {
+    display: none; }
+  .day--open .day__goal-result-show {
+    display: block; }
+  .day--open .day-table__column--flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .day--open .about-goal-short__goal-description {
+    overflow: hidden;
+    height: 2rem; }
   @media (max-width: 950px) {
   .day {
     -webkit-box-orient: vertical;
@@ -2407,6 +2415,9 @@ html {
       margin: 0; }
     .day__goal-result-select-goals {
       margin: 0; } }
+  @media (max-width: 400px) {
+  .day__goal-result-select-goals {
+    height: 35px; } }
 
 .saved {
   position: relative;
@@ -2703,6 +2714,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 2px solid #dd7fb0; }
   .day-table__column {
     display: -webkit-box;
@@ -2714,8 +2729,6 @@ html {
             flex-direction: column;
     width: 25%;
     padding: 15px 13px; }
-  .day-table__column--future {
-    padding-bottom: 10px; }
   .day-table__column:nth-child(2) {
     border-left: 2px solid #dd7fb0;
     border-right: 2px solid #dd7fb0; }
@@ -2728,10 +2741,13 @@ html {
     font-size: 22px;
     font-family: 'FuturaPTDemi';
     color: #dd7fb0; }
-  .day-table__column-title--success {
-    color: #20b208; }
   .day-table__column-title--empty {
     visibility: hidden; }
+  .day-table__column-title--empty--future {
+    margin-bottom: 15px; }
+  .day-table__column--success .about-goal-short,
+  .day-table__column--success .day-table__column-title {
+    color: #20b208; }
   @media (max-width: 950px) {
   .day-table {
     -webkit-box-orient: vertical;
@@ -2765,6 +2781,14 @@ html {
               justify-content: space-between; }
     .day-table__column--mobile-display-none {
       display: none; }
+    .day-table__column--flex-row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
     .day-table__column--future {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
@@ -2794,8 +2818,6 @@ html {
   font-size: 1rem;
   font-family: 'FuturaPTBook';
   color: #dd7fb0; }
-  .about-goal-short--success {
-    color: #20b208; }
   .about-goal-short__status-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3000,43 +3022,43 @@ html {
   .form-button__edit-day-btn:hover {
     text-decoration: none; }
 
-.score__day-score, .score__total-score, .score__range-score {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%; }
-
-.score__day-score-title, .score__total-score-title, .score__range-title {
-  text-align: center;
-  font-family: 'FuturaPTDemi';
-  font-size: 15px; }
-
-.score__day-score-sum, .score__total-score-sum, .score__range-score-sum {
-  margin: 2px 0 1px;
-  text-align: center;
-  line-height: 27px;
-  font-family: 'FuturaPTDemi';
-  font-size: 24px;
-  color: #20b208; }
-
-.score__day-score-text, .score__total-score-text, .score__range-score-text {
-  margin: 13px 0 21px;
-  width: 100%;
-  line-height: 19px;
-  font-size: 1rem;
-  font-family: 'FuturaPTBook'; }
-
-@media (max-width: 950px) {
+.score {
+  margin-top: 82px; }
+  .score--future {
+    margin-top: 58px; }
+  .score__day-score, .score__total-score, .score__range-score {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%; }
+  .score__day-score-title, .score__total-score-title, .score__range-title {
+    text-align: center;
+    font-family: 'FuturaPTDemi';
+    font-size: 15px; }
+  .score__day-score-sum, .score__total-score-sum, .score__range-score-sum {
+    margin: 2px 0 1px;
+    text-align: center;
+    line-height: 27px;
+    font-family: 'FuturaPTDemi';
+    font-size: 24px;
+    color: #20b208; }
+  .score__day-score-text, .score__total-score-text, .score__range-score-text {
+    margin: 13px 0 21px;
+    width: 100%;
+    line-height: 19px;
+    font-size: 1rem;
+    font-family: 'FuturaPTBook'; }
+  @media (max-width: 950px) {
   .score__day-score {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3090,6 +3112,9 @@ html {
     margin-left: 10px; }
   .score__range-score-text {
     margin: 8px 0 27px; } }
+  @media (max-width: 450px) {
+  .score__day-score {
+    width: 100%; } }
 
 .day-date {
   display: -webkit-box;

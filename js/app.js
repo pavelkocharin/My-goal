@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 43);
+/******/ 	return __webpack_require__(__webpack_require__.s = 45);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -93,14 +93,12 @@
 
 (function () {
   var activeClass = 'range-field__item--active';
-  var ItemActive = '.range-field__item--active';
   var rangeItems = document.querySelectorAll('.range-field__item');
-  var BtnMinus = document.querySelector('.range-field__btn--min');
-  var BtnPlus = document.querySelector('.range-field__btn--plus');
-  var rangeItemActive;
+  var BtnMinus = document.querySelectorAll('.range-field__btn--min');
+  var BtnPlus = document.querySelectorAll('.range-field__btn--plus');
 
-  function getActiveItem() {
-    rangeItemActive = document.querySelector(ItemActive);
+  function getActiveItem(id) {
+    return document.querySelector('.range-field__item--active[data-id="' + id + '"]');
   }
 
   ;
@@ -108,11 +106,12 @@
   if (BtnPlus) {
     Array.prototype.forEach.call(rangeItems, function (elem) {
       elem.addEventListener('click', function () {
-        getActiveItem();
+        var id = elem.getAttribute('data-id');
+        var rangeItemActive = getActiveItem(id);
 
         if (elem !== rangeItemActive) {
-          elem.classList.add(activeClass);
           rangeItemActive.classList.remove(activeClass);
+          elem.classList.add(activeClass);
         } else {
           return null;
         }
@@ -120,29 +119,35 @@
         ;
       });
     });
-    BtnPlus.addEventListener('click', function () {
-      getActiveItem();
+    Array.prototype.forEach.call(BtnPlus, function (elem) {
+      elem.addEventListener('click', function () {
+        var id = elem.getAttribute('data-id');
+        var rangeItemActive = getActiveItem(id);
 
-      if (rangeItemActive !== rangeItems[rangeItems.length - 1]) {
-        rangeItemActive.classList.remove(activeClass);
-        rangeItemActive.nextElementSibling.classList.add(activeClass);
-      } else {
-        return null;
-      }
+        if (rangeItemActive.nextElementSibling) {
+          rangeItemActive.classList.remove(activeClass);
+          rangeItemActive.nextElementSibling.classList.add(activeClass);
+        } else {
+          return null;
+        }
 
-      ;
+        ;
+      });
     });
-    BtnMinus.addEventListener('click', function () {
-      getActiveItem();
+    Array.prototype.forEach.call(BtnMinus, function (elem) {
+      elem.addEventListener('click', function () {
+        var id = elem.getAttribute('data-id');
+        var rangeItemActive = getActiveItem(id);
 
-      if (rangeItemActive !== rangeItems[0]) {
-        rangeItemActive.classList.remove(activeClass);
-        rangeItemActive.previousElementSibling.classList.add(activeClass);
-      } else {
-        return null;
-      }
+        if (rangeItemActive.previousElementSibling) {
+          rangeItemActive.classList.remove(activeClass);
+          rangeItemActive.previousElementSibling.classList.add(activeClass);
+        } else {
+          return null;
+        }
 
-      ;
+        ;
+      });
     });
   }
 
@@ -272,7 +277,9 @@
 
 (function () {
   var openMobileMenu = document.querySelector('.header-nav__mobile-btn');
+  var openMobileMenuStyle = getComputedStyle(openMobileMenu);
   var closeMobileMenu = document.querySelector('.popup-layout__popup-menu-close');
+  var closeMobileMenuUnactive = 'popup-layout__popup-menu-close--unactive';
   var popup = document.querySelector('.popup-layout');
   var popupActive = 'popup-layout--active';
   var menuMobileGroup = document.querySelector('.popup-layout__popup-menu');
@@ -291,20 +298,19 @@
       popup.classList.add(popupActive);
       menuMobileGroup.appendChild(menu);
       menuMobileGroup.appendChild(entryForm);
+      closeMobileMenu.classList.remove(closeMobileMenuUnactive);
 
       window.onresize = function () {
-        if (popup.classList.contains(popupActive) && document.body.clientWidth > 830) {
+        if (popup.classList.contains(popupActive) && openMobileMenuStyle.display == 'none') {
           menu.classList.remove(menuActive);
           entryForm.classList.remove(entryFormActive);
           popup.classList.remove(popupActive);
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
-        } else if (!popup.classList.contains(popupActive) && document.body.clientWidth > 830) {
+        } else if (!popup.classList.contains(popupActive) && openMobileMenuStyle.display == 'none') {
           headerNav.appendChild(menu);
           headerTop.appendChild(entryForm);
         }
-
-        ;
       };
     });
   }
@@ -316,7 +322,7 @@
       popup.classList.remove(popupActive);
       menu.classList.remove(menuActive);
       entryForm.classList.remove(entryFormActive);
-      menuStyle.display == "block";
+      menuStyle.display == 'block';
     });
   }
 
@@ -457,13 +463,99 @@
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+"use strict";
+ //функция сворачивания/разворачивания дней на странице "цели"
+
+(function () {
+  var goals = document.querySelector('.goals');
+
+  if (goals) {
+    goals.addEventListener('click', function (event) {
+      var dayId = event.target.getAttribute('data-toggle');
+
+      if (dayId) {
+        var day = document.querySelector('.day[data-id="' + dayId + '"]');
+
+        if (day) {
+          day.classList.toggle('day--open');
+        }
+      }
+    });
+  }
+
+  ;
+})();
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+"use strict";
+ //функция отслеживания Checkbox целей 
+
+(function () {
+  var goals = document.querySelector('.goals');
+  var tableColumn = document.querySelectorAll('.day-table__column');
+  var tableSuccess = 'day-table__column--success';
+  var checkboxClass = '.goal-list__item-checkbox';
+
+  if (goals) {
+    //функция мониторинга состояния колонок (при первой загрузке и клике)
+    var firstCheckDay = function firstCheckDay() {
+      Array.prototype.forEach.call(tableColumn, function (elem) {
+        var tableCheckboxes = elem.querySelectorAll(checkboxClass);
+        Array.prototype.forEach.call(tableCheckboxes, function (el) {
+          if (el.hasAttribute('checked')) {
+            elem.classList.add(tableSuccess);
+          } else if (!elem.querySelector('.goal-list__item-checkbox[checked]')) {
+            elem.classList.remove(tableSuccess);
+          }
+
+          ;
+        });
+      });
+    }; //выставление в результатах количества выполненных целей (не знаю нужна ли или на сервере, на всякий)
+
+
+    var allDays = document.querySelectorAll('.day');
+    var tableColumnSuccessClass = '.day-table__column--success';
+    var goalNumberSuccessClass = '.day__goal-result-short--success';
+
+    var checkGoalsSuccess = function checkGoalsSuccess() {
+      Array.prototype.forEach.call(allDays, function (day) {
+        var goalColumnSuccess = day.querySelectorAll(tableColumnSuccessClass);
+        var goalNumberSuccess = day.querySelectorAll(goalNumberSuccessClass);
+        Array.prototype.forEach.call(goalNumberSuccess, function (element) {
+          var daySuccess = goalColumnSuccess.length;
+          element.innerHTML = daySuccess;
+        });
+      });
+    }; //запуск первого мониторинга
+
+
+    firstCheckDay(); //проверка количества выполненных целей
+
+    checkGoalsSuccess(); //обработчик на клик чекбокса (по атрибуту)
+
+    Array.prototype.forEach.call(tableColumn, function (elem) {
+      var tableCheckboxes = elem.querySelectorAll(checkboxClass);
+      Array.prototype.forEach.call(tableCheckboxes, function (el) {
+        el.addEventListener('click', function () {
+          if (!el.hasAttribute('checked')) {
+            el.setAttribute('checked', '');
+          } else {
+            el.removeAttribute('checked');
+          }
+
+          firstCheckDay();
+          checkGoalsSuccess();
+        });
+      });
+    });
+  }
+
+  ;
+})();
 
 /***/ }),
 /* 8 */
@@ -677,6 +769,18 @@
 
 /***/ }),
 /* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -700,6 +804,12 @@ var login = __webpack_require__(4);
 // EXTERNAL MODULE: ./src/js/fogot-pass.js
 var fogot_pass = __webpack_require__(5);
 
+// EXTERNAL MODULE: ./src/js/toggle-day.js
+var toggle_day = __webpack_require__(6);
+
+// EXTERNAL MODULE: ./src/js/check-day.js
+var check_day = __webpack_require__(7);
+
 // CONCATENATED MODULE: ./src/js/index.js
 
 
@@ -707,116 +817,118 @@ var fogot_pass = __webpack_require__(5);
 
 
 
+
+
 // EXTERNAL MODULE: ./src/scss/body-page.scss
-var body_page = __webpack_require__(6);
+var body_page = __webpack_require__(8);
 
 // EXTERNAL MODULE: ./src/scss/header.scss
-var header = __webpack_require__(7);
+var header = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./src/scss/header-logo.scss
-var header_logo = __webpack_require__(8);
+var header_logo = __webpack_require__(10);
 
 // EXTERNAL MODULE: ./src/scss/header-nav.scss
-var header_nav = __webpack_require__(9);
+var header_nav = __webpack_require__(11);
 
 // EXTERNAL MODULE: ./src/scss/header-form.scss
-var header_form = __webpack_require__(10);
+var header_form = __webpack_require__(12);
 
 // EXTERNAL MODULE: ./src/scss/intro.scss
-var intro = __webpack_require__(11);
+var intro = __webpack_require__(13);
 
 // EXTERNAL MODULE: ./src/scss/main.scss
-var main = __webpack_require__(12);
+var main = __webpack_require__(14);
 
 // EXTERNAL MODULE: ./src/scss/about-site.scss
-var about_site = __webpack_require__(13);
+var about_site = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./src/scss/about-author.scss
-var about_author = __webpack_require__(14);
+var about_author = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./src/scss/news-block.scss
-var news_block = __webpack_require__(15);
+var news_block = __webpack_require__(17);
 
 // EXTERNAL MODULE: ./src/scss/questions.scss
-var questions = __webpack_require__(16);
+var questions = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./src/scss/footer.scss
-var footer = __webpack_require__(17);
+var footer = __webpack_require__(19);
 
 // EXTERNAL MODULE: ./src/scss/button-block.scss
-var button_block = __webpack_require__(18);
+var button_block = __webpack_require__(20);
 
 // EXTERNAL MODULE: ./src/scss/popup-layout.scss
-var popup_layout = __webpack_require__(19);
+var popup_layout = __webpack_require__(21);
 
 // EXTERNAL MODULE: ./src/scss/registration.scss
-var scss_registration = __webpack_require__(20);
+var scss_registration = __webpack_require__(22);
 
 // EXTERNAL MODULE: ./src/scss/login.scss
-var scss_login = __webpack_require__(21);
+var scss_login = __webpack_require__(23);
 
 // EXTERNAL MODULE: ./src/scss/recovery.scss
-var recovery = __webpack_require__(22);
+var recovery = __webpack_require__(24);
 
 // EXTERNAL MODULE: ./src/scss/success.scss
-var success = __webpack_require__(23);
+var success = __webpack_require__(25);
 
 // EXTERNAL MODULE: ./src/scss/new-pass.scss
-var new_pass = __webpack_require__(24);
+var new_pass = __webpack_require__(26);
 
 // EXTERNAL MODULE: ./src/scss/profile-item.scss
-var profile_item = __webpack_require__(25);
+var profile_item = __webpack_require__(27);
 
 // EXTERNAL MODULE: ./src/scss/payment.scss
-var payment = __webpack_require__(26);
+var payment = __webpack_require__(28);
 
 // EXTERNAL MODULE: ./src/scss/goals.scss
-var goals = __webpack_require__(27);
+var goals = __webpack_require__(29);
 
 // EXTERNAL MODULE: ./src/scss/day.scss
-var day = __webpack_require__(28);
+var day = __webpack_require__(30);
 
 // EXTERNAL MODULE: ./src/scss/saved.scss
-var saved = __webpack_require__(29);
+var saved = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/scss/promo.scss
-var promo = __webpack_require__(30);
+var promo = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./src/scss/range-field.scss
-var range_field = __webpack_require__(31);
+var range_field = __webpack_require__(33);
 
 // EXTERNAL MODULE: ./src/scss/day-info.scss
-var day_info = __webpack_require__(32);
+var day_info = __webpack_require__(34);
 
 // EXTERNAL MODULE: ./src/scss/day-table.scss
-var day_table = __webpack_require__(33);
+var day_table = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./src/scss/about-goal-short.scss
-var about_goal_short = __webpack_require__(34);
+var about_goal_short = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/scss/form.scss
-var scss_form = __webpack_require__(35);
+var scss_form = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./src/scss/form-button.scss
-var form_button = __webpack_require__(36);
+var form_button = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./src/scss/score.scss
-var score = __webpack_require__(37);
+var score = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/scss/day-date.scss
-var day_date = __webpack_require__(38);
+var day_date = __webpack_require__(40);
 
 // EXTERNAL MODULE: ./src/scss/part-result.scss
-var part_result = __webpack_require__(39);
+var part_result = __webpack_require__(41);
 
 // EXTERNAL MODULE: ./src/scss/goal-list.scss
-var goal_list = __webpack_require__(40);
+var goal_list = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/scss/variables.scss
-var variables = __webpack_require__(41);
+var variables = __webpack_require__(43);
 
 // EXTERNAL MODULE: ./src/scss/fonts.scss
-var fonts = __webpack_require__(42);
+var fonts = __webpack_require__(44);
 
 // CONCATENATED MODULE: ./src/index.js
 // JS - ./js/index.js
