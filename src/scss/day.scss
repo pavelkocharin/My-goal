@@ -36,6 +36,7 @@
   }
 
   &__goal-result-show {
+    display: none;
     border: none;
     background-color: transparent;
     margin: 0;
@@ -88,6 +89,27 @@
 
   &__results-mobile {
     display: none;
+  }
+
+  &--open .goal-list,
+  &--open .part-result,
+  &--open .day-table__column-title,
+  &--open .score,
+  &--open .day-info {
+    display: none;
+  }
+
+  &--open &__goal-result-show {  
+    display: block;
+  }
+  
+  &--open .day-table__column--flex-row {
+    display: flex;
+  }
+
+  &--open .about-goal-short__goal-description {
+    overflow: hidden;
+    height: $lineheight * 2;
   }
 }
 

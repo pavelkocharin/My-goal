@@ -2,6 +2,7 @@
 
 .day-table {
   display: flex;
+  flex-direction: row;
   border: 2px solid $table-border;
 
   &__column {
@@ -29,16 +30,17 @@
     color: $table-border;
   }
 
-  &__column-title--success {
-    color: $button-color;
-  }
-
   &__column-title--empty {
     visibility: hidden;
   }
 
   &__column-title--empty--future {
     margin-bottom: 15px;
+  }
+
+  &__column--success .about-goal-short,
+  &__column--success &__column-title {
+    color: $button-color;
   }
 }
 

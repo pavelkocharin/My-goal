@@ -4,9 +4,7 @@
 (function () {
 
   var openMobileMenu = document.querySelector('.header-nav__mobile-btn');
-
   var openMobileMenuStyle = getComputedStyle(openMobileMenu);
-
   var closeMobileMenu = document.querySelector('.popup-layout__popup-menu-close');
   var closeMobileMenuUnactive = 'popup-layout__popup-menu-close--unactive'
   var popup = document.querySelector('.popup-layout');
@@ -18,7 +16,7 @@
   var entryFormActive = 'header-form--active';
   var headerNav = document.querySelector('.header-nav');
   var headerTop = document.querySelector('.header__top-content');
-  var menuStyle = getComputedStyle (menu);
+  var menuStyle = getComputedStyle(menu);
 
   if (openMobileMenu) {
     openMobileMenu.addEventListener( 'click', function (){

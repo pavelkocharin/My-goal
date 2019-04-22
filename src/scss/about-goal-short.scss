@@ -8,10 +8,6 @@
   font-family: 'FuturaPTBook';
   color: $table-border;
 
-  &--success {
-    color: $button-color;
-  }
-
   &__status-block {
     display: flex;
     flex-direction: row;
@@ -25,7 +21,7 @@
 
   &__goal-description {
     margin: 2px 0 1px;
-    line-height: 1rem;
+    line-height: $lineheight;
   }
 }
 
