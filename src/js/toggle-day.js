@@ -13,6 +13,7 @@
   
         if (day) {
           day.classList.toggle('day--open');
+          day.scrollIntoView();
         }
       }
     });
