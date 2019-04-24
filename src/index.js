@@ -1,5 +1,5 @@
 // JS - ./js/index.js
-import './js/'
+//import './js/'
 // SCSS
 import './scss/body-page.scss'
 import './scss/header.scss'

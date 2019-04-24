@@ -27,7 +27,15 @@ module.exports = {
     paths: PATHS
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
+    'check-day': './src/js/check-day',
+    'fogot-pass':'./src/js/fogot-pass',
+    login: './src/js/login',
+    'mobile-menu': './src/js/mobile-menu',
+    'modal-saved': './src/js/modal-saved',
+    range: './src/js/range',
+    registration: './src/js/registration',
+    'toggle-day': './src/js/toggle-day'
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
@@ -160,6 +168,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/js`, to: `${PATHS.assets}js` }
     ]),
   ],
   //отключение минификации js файлов
