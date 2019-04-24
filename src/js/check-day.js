@@ -1,5 +1,5 @@
 'use strict';
-//функция отслеживания Checkbox целей 
+//функция отслеживания Checkbox для подкрашивания целей и подсчёта выполненных (подкрашенных) целей
 (function () {
   var goals = document.querySelector('.goals');
   var tableColumn = document.querySelectorAll('.day-table__column');
@@ -33,7 +33,7 @@
         var goalNumberSuccess = day.querySelectorAll(goalNumberSuccessClass);
 
         Array.prototype.forEach.call(goalNumberSuccess, function (element) {
-          var daySuccess = goalColumnSuccess.length
+          var daySuccess = goalColumnSuccess.length;
           element.innerHTML = daySuccess;
         });
       });

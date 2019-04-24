@@ -42,6 +42,10 @@
     color: $first-grey;
   }
 
+  &__btn-span--no-promo {
+    margin-bottom: 0;
+  }
+
   &__edit-day-btn {
     background: transparent;
     border: none;
@@ -56,5 +60,13 @@
 
   &__edit-day-btn:hover {
     text-decoration: none;
+  }
+
+  &__text {
+    margin: 0 auto 15px;
+    line-height: 28px;
+    text-align: center;
+    font-family: 'FuturaPTBook';
+    font-size: 20px;
   }
 }
