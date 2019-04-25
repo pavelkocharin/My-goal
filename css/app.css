@@ -93,15 +93,19 @@ html {
     height: auto; } }
 
 .header-logo {
-  margin: 0 0 .5rem 0;
-  padding: 0 2rem 0 0;
+  margin: 0;
+  padding: 0;
   text-decoration: none;
-  font-family: 'ZingScriptRustSBDemo';
-  font-size: 1.5rem;
-  color: #fff; }
-
-@media (max-width: 830px) {
-  .header-logo {
+  cursor: pointer; }
+  .header-logo__text {
+    margin: 0 0 .5rem 0;
+    padding: 0 2rem 0 0;
+    text-decoration: none;
+    font-family: 'ZingScriptRustSBDemo';
+    font-size: 1.5rem;
+    color: #fff; }
+  @media (max-width: 830px) {
+  .header-logo__text {
     margin: 0;
     font-size: 1.2rem; } }
 
@@ -3009,6 +3013,8 @@ html {
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #737373; }
+  .form-button__btn-span--no-promo {
+    margin-bottom: 0; }
   .form-button__edit-day-btn {
     background: transparent;
     border: none;
@@ -3021,6 +3027,12 @@ html {
     color: #82848c; }
   .form-button__edit-day-btn:hover {
     text-decoration: none; }
+  .form-button__text {
+    margin: 0 auto 15px;
+    line-height: 28px;
+    text-align: center;
+    font-family: 'FuturaPTBook';
+    font-size: 20px; }
 
 .score {
   margin-top: 82px; }
