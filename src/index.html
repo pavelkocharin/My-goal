@@ -326,13 +326,16 @@
             РЕГИСТРАЦИЯ
           </h1>
           <form class="registration__form" action="#" id="registration__form" name="registration__form" method="POST">
-            <input class="registration__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <input class="registration__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <input class="registration__input" type="password" name="password" required placeholder="Пароль ещё раз" autocomplete="off">
+            <input class="registration__input reg-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off" id="reg-validate">
+            <input class="registration__input reg-validate" type="password" name="password"  placeholder="Пароль" autocomplete="off">
+            <input class="registration__input reg-validate" type="password" name="password"  placeholder="Пароль ещё раз" autocomplete="off">
             <p class="registration__error">
               Такой e-mail уже зарегистрирован
             </p>
-            <button class="registration__button" type="submit">
+            <p class="profile-item__error-text-validate reg-validate">
+              Заполните все поля
+            </p>
+            <button class="registration__button" type="submit" data-id="reg-validate">
               ПРОДОЛЖИТЬ
             </button>
           </form>
@@ -346,14 +349,17 @@
             ВХОД
           </h1>
           <form class="login__form" action="#" id="login__form" name="login__form" method="GET">
-            <input class="login__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <input class="login__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
+            <input class="login__input login-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off">
+            <input class="login__input login-validate" type="password" name="password"  placeholder="Пароль" autocomplete="off">
             <p class="login__error">
               Неверный e-mail или пароль
             </p>
-            <a class="login__button" href="goals.html">
+            <p class="profile-item__error-text-validate login-validate">
+              Заполните все поля
+            </p>
+            <button class="login__button" type="submit" data-id="login-validate">
               ВОЙТИ
-            </a>
+            </button>
             <button class="login__button-recovery open-modal" id="recovery-pass" data-id="recovery-modal" type="button">
               Забыли пароль?
             </button>
@@ -368,11 +374,14 @@
             ВОССТАНОВЛЕНИЕ <br> ПАРОЛЯ
           </h1>
           <form class="recovery__form" action="#" id="recovery__form" name="recovery__form" method="POST">
-            <input class="recovery__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
+            <input class="recovery__input recovery-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off">
             <p class="recovery__error">
               Такой e-mail не зарегистрирован
             </p>
-            <button class="recovery__button" id="recovery-pass-form" type="submit">
+            <p class="profile-item__error-text-validate recovery-validate">
+              Заполните все поля
+            </p>
+            <button class="recovery__button" id="recovery-pass-form" type="submit" data-id="recovery-validate">
               ДАЛЕЕ
             </button>
           </form>

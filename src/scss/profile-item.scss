@@ -190,7 +190,16 @@
     color: red;
   }
 
+  &__error-text-validate {
+    display: none;
+    color: red;
+  }
+
   &__error-text--active {
+    display: block;
+  }
+
+  &__error-text-validate--active {
     display: block;
   }
 }
