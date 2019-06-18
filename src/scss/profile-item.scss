@@ -184,6 +184,15 @@
     border-color: $button-color-hover;
     color: #fff;
   }
+
+  &__error-text {
+    display: none;
+    color: red;
+  }
+
+  &__error-text--active {
+    display: block;
+  }
 }
 
 @media (max-width: 1029px)  {

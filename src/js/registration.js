@@ -2,13 +2,8 @@
 //функция модального окна "регистрация"
 
 (function () {
-
   var popup = document.querySelector('.popup-layout');
   var popupActive = 'popup-layout--active';
-  var registrationFieldActive = 'popup-layout__registration-field--active';
-  var registrationCloseBtn = document.querySelector('.registration__close-btn');
-  var registrationBtn = document.querySelectorAll('.header-form__btn--reg, .main__goals-status-link-reg');
-  var registrationField = document.querySelector('.popup-layout__registration-field');
   var closeMobileMenu = document.querySelector('.popup-layout__popup-menu-close');
   var closeMobileMenuUnactive = 'popup-layout__popup-menu-close--unactive';
   var menuMobileGroup = document.querySelector('.popup-layout__popup-menu');
@@ -18,23 +13,42 @@
   var entryFormActive = 'header-form--active';
   var headerNav = document.querySelector('.header-nav');
   var headerTop = document.querySelector('.header__top-content');
+  var openModalButtons = document.querySelectorAll('.open-modal');
+  var modalActiveClass = 'popup-layout__modal-active';
+  var closeModalButtons = document.querySelectorAll('.close-modal');
 
-  if (registrationBtn) {
-    Array.prototype.forEach.call(registrationBtn, function (elem) {
-      elem.addEventListener( 'click', function (){
+  openModalButtons.forEach(function(button){
+    button.addEventListener('click', function(){
+      var id = button.getAttribute('data-id');
+      var modalWindow = document.getElementById(id);
+      openModal(id);
+      
+      function openModal (id) {
+
+        var openedModale = document.querySelectorAll('.popup-layout__modal-active');
         if (!popup.classList.contains(popupActive)) {
           popup.classList.add(popupActive);
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
-          registrationField.classList.add(registrationFieldActive);
-        } else {
-          registrationField.classList.add(registrationFieldActive);
+          modalWindow.classList.add(modalActiveClass);
+
+        } else if (openedModale) {
+          
+          openedModale.forEach(function(el){
+            el.classList.remove(modalActiveClass);
+
+          });
+
+          modalWindow.classList.add(modalActiveClass);
           closeMobileMenu.classList.add(closeMobileMenuUnactive);
-          menuMobileGroup.removeChild(entryForm);
-          menuMobileGroup.removeChild(menu);
+
+          if (menuMobileGroup.firstElementChild) {
+            menuMobileGroup.removeChild(entryForm);
+            menuMobileGroup.removeChild(menu);
+          }
         };
 
         window.onresize = function() {
-          if (registrationField.classList.contains(registrationFieldActive) && document.body.clientWidth > 830) {
+          if (modalWindow.classList.contains(modalActiveClass) && document.body.clientWidth > 830) {
             menu.classList.remove(menuActive);
             entryForm.classList.remove(entryFormActive);
             popup.classList.add(popupActive);
@@ -42,15 +56,24 @@
             headerTop.appendChild(entryForm);
           };
         };
-      });
-
-      if (registrationCloseBtn) {
-        registrationCloseBtn.addEventListener( 'click', function (){
-          popup.classList.remove(popupActive);
-          registrationField.classList.remove(registrationFieldActive);
-        });
       };
-    });
-  };
+    })
+  });
 
+
+  closeModalButtons.forEach(function(button){
+    button.addEventListener('click', function(){
+      closeModal();
+    });
+
+    function closeModal() {
+      var modalActiveClass = '.popup-layout__modal-active';
+      var modalWindow = document.querySelectorAll(modalActiveClass);
+
+      popup.classList.remove(popupActive);
+      modalWindow.forEach(function(elem){
+          elem.classList.remove('popup-layout__modal-active');
+      });
+    }
+  });
 }()); 

@@ -102,9 +102,12 @@
             СМЕНИТЬ ПАРОЛЬ
           </h2>
           <form action="#" class="profile-item__form profile-item__form-password" id="change-password" name="change-password" method="POST">
-            <input class="profile-item__form-input" type="email" name="usermail" required placeholder="E-mail" autocomplete="on">
-            <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль" autocomplete="off">
-            <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль ещё раз" autocomplete="off">
+            <input class="profile-item__form-input" type="email" name="usermail"  placeholder="E-mail" autocomplete="on">
+            <input class="profile-item__form-input" type="password" name="password"  placeholder="Новый пароль" autocomplete="off">
+            <input class="profile-item__form-input" type="password" name="password"  placeholder="Новый пароль ещё раз" autocomplete="off">
+            <p class="profile-item__error-text">
+              Заполните все поля
+            </p>
             <div class="profile-item__btn-block">
               <button class="profile-item__form-button--reset" type="reset" form="change-password">
               ОТМЕНА
@@ -237,6 +240,7 @@
           </form>
         </div>
       </div>
+
       <div class="popup-layout__message-pass-field">
         <div class="new-pass">
           <button class="new-pass__close-btn"></button>
@@ -262,9 +266,10 @@
           </button>
         </div>
       </div>
-      <div class="popup-layout__saved">
+
+      <div class="popup-layout__saved" id="saved-modal">
         <div class="saved">
-          <button class="saved__close-btn" type="button"></button>
+          <button class="saved__close-btn close-modal" type="button"></button>
           <p class="saved__text">
             Данные сохранены
           </p>
@@ -273,6 +278,23 @@
           </button>
         </div>
       </div>
+
+
+      <div class="popup-layout__info">
+        <div class="info">
+          <p class="info__text">
+            Для участия необходимо 
+            <button class="info__link-reg" type="button">
+              зарегистрироваться
+            </button>
+            (или выполнить
+            <button class="info__link-login" type="button">
+              вход
+            </button>) и иметь положительный баланс.
+          </p>
+        </div>
+
+
     </div>
   </body>
 </html>

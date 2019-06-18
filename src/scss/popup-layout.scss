@@ -62,79 +62,75 @@
 
   &__registration-field {
     position: absolute;
-    top: calc(50% - 220px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 440px;
-  }
-
-  &__registration-field--active {
-    display: block;
+    height: auto;
   }
 
   &__login-field {
     position: absolute;
-    top: calc(50% - 210px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 420px;
-  }
-
-  &__login-field--active {
-    display: block;
+    height: auto;
   }
 
   &__recovery-field {
     position: absolute;
-    top: calc(50% - 185px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 370px;
-  }
-
-  &__recovery-field--active {
-    display: block;
+    height: auto;
   }
 
   &__message-pass-field {
     position: absolute;
-    top: calc(50% - 120px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 240px;
   }
 
-  &__message-pass-field--active {
-    display: block;
-  }
-
   &__success-field {
     position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 300px;
   }
 
-  &__success-field--active {
-    display: block;
-  }
-
-  &__saved {
+  &__info {
     position: absolute;
-    top: calc(50% - 100px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 200px;
   }
 
-  &__saved--active {
+  &__saved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 600px;
+    height: 200px;
+  }
+
+  &__modal-active {
     display: block;
   }
 }
