@@ -863,7 +863,7 @@ html {
     -webkit-transition: ease .15s;
     -o-transition: ease .15s;
     transition: ease .15s;
-    margin: 0 auto 38px;
+    margin: 15px auto 28px;
     text-decoration: none;
     font-family: 'FuturaPTBook';
     font-size: 1.25rem;
@@ -1276,57 +1276,75 @@ html {
             transform: rotate(-45deg); }
   .popup-layout__registration-field {
     position: absolute;
-    top: calc(50% - 220px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 440px; }
-  .popup-layout__registration-field--active {
-    display: block; }
+    height: auto; }
   .popup-layout__login-field {
     position: absolute;
-    top: calc(50% - 210px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 420px; }
-  .popup-layout__login-field--active {
-    display: block; }
+    height: auto; }
   .popup-layout__recovery-field {
     position: absolute;
-    top: calc(50% - 185px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
-    height: 370px; }
-  .popup-layout__recovery-field--active {
-    display: block; }
+    height: auto; }
   .popup-layout__message-pass-field {
     position: absolute;
-    top: calc(50% - 120px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 240px; }
-  .popup-layout__message-pass-field--active {
-    display: block; }
   .popup-layout__success-field {
     position: absolute;
-    top: calc(50% - 150px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 300px; }
-  .popup-layout__success-field--active {
-    display: block; }
-  .popup-layout__saved {
+  .popup-layout__info {
     position: absolute;
-    top: calc(50% - 100px);
-    left: calc(50% - 300px);
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     display: none;
     width: 600px;
     height: 200px; }
-  .popup-layout__saved--active {
+  .popup-layout__saved {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    display: none;
+    width: 600px;
+    height: 200px; }
+  .popup-layout__modal-active {
     display: block; }
 
 .registration {
@@ -1346,7 +1364,7 @@ html {
   width: 100%;
   height: 100%; }
   .registration__title {
-    margin-top: 70px;
+    margin-top: 45px;
     line-height: 40px;
     font-family: 'FuturaPTBold';
     font-size: 40px;
@@ -1391,11 +1409,17 @@ html {
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
+  .registration__error {
+    margin: 15px 0;
+    font-size: 1.38rem;
+    text-align: center;
+    font-family: 'FuturaPTBook';
+    color: red; }
   .registration__button {
     background-color: #20b208;
     border: none;
     border-radius: 25px;
-    margin-top: 5px;
+    margin: 5px 0 20px;
     padding: 15px 0;
     width: 160px;
     text-align: center;
@@ -1435,14 +1459,13 @@ html {
   @media (max-width: 830px) {
   .registration {
     width: 470px;
-    height: 370px;
-    top: calc(50% - 185px);
+    height: auto;
     left: calc(50% - 235px); }
     .registration__title {
-      margin-top: 35px;
+      margin-top: 20px;
       font-size: 24px; }
     .registration__input {
-      height: 46px; }
+      height: 40px; }
     .registration__button {
       margin-top: 11px; }
     .registration__close-btn {
@@ -1544,7 +1567,7 @@ html {
   .login__button-recovery {
     background-color: transparent;
     border: none;
-    margin-top: 20px;
+    margin: 10px 0 15px;
     line-height: 28px;
     text-decoration: underline;
     font-family: 'FuturaPTBook';
@@ -1577,17 +1600,22 @@ html {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg); }
+  .login__error {
+    margin: 15px 0;
+    font-size: 1.38rem;
+    text-align: center;
+    font-family: 'FuturaPTBook';
+    color: red; }
   @media (max-width: 830px) {
   .login {
     width: 470px;
-    height: 370px;
-    top: calc(50% - 185px);
+    height: auto;
     left: calc(50% - 235px); }
     .login__title {
       margin: 35px 0 16px;
       font-size: 24px; }
     .login__input {
-      height: 46px; }
+      height: 40px; }
     .login__button {
       margin-top: 11px; }
     .login__close-btn {
@@ -1671,11 +1699,17 @@ html {
     font-family: 'FuturaPTBook';
     font-size: 18px;
     color: #a6a6a6; }
+  .recovery__error {
+    margin: 15px 0;
+    font-size: 1.38rem;
+    text-align: center;
+    font-family: 'FuturaPTBook';
+    color: red; }
   .recovery__button {
     background-color: #20b208;
     border: none;
     border-radius: 25px;
-    margin-top: 5px;
+    margin: 5px 0 15px;
     width: 120px;
     height: 50px;
     font-family: 'FuturaPTDemi';
@@ -1713,7 +1747,7 @@ html {
   @media (max-width: 830px) {
   .recovery {
     width: 470px;
-    height: 280px;
+    height: auto;
     top: calc(50% - 140px);
     left: calc(50% - 235px); }
     .recovery__title {
@@ -2111,6 +2145,16 @@ html {
             box-shadow: 0 0 8px rgba(59, 224, 112, 0.9);
     border-color: #27d80c;
     color: #fff; }
+  .profile-item__error-text {
+    display: none;
+    color: red; }
+  .profile-item__error-text-validate {
+    display: none;
+    color: red; }
+  .profile-item__error-text--active {
+    display: block; }
+  .profile-item__error-text-validate--active {
+    display: block; }
   @media (max-width: 1029px) {
   .profile-item {
     border-left: 1px solid #e6e6e6; }
@@ -3331,4 +3375,72 @@ html {
 @font-face {
   font-family: 'FuturaPTDemi';
   src: local("FuturaPTDemi"), url(.././fonts/FuturaPTDemi95e2a61256458dae7063b1d1bd491906.eot), url(.././fonts/FuturaPTDemi95e2a61256458dae7063b1d1bd491906.eot?#iefix) format("embedded-opentype"), url(.././fonts/FuturaPTDemi3c631028ff37cb207b644170f19f7f83.woff) format("woff"), url(.././fonts/FuturaPTDemie5788751ec18fdec3198a89f80bcc0e6.ttf) format("truetype"), url(.././fonts/FuturaPTDemi5b6575ccd521b96b68504700b10e3e66.otf); }
+
+.info {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+  height: 100%; }
+  .info__close-btn {
+    position: absolute;
+    background: transparent;
+    border: none;
+    top: -25px;
+    right: -25px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px; }
+  .info__close-btn:before, .info__close-btn:after {
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    background: #fff;
+    width: 14px;
+    height: 2px;
+    content: ""; }
+  .info__close-btn:before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .info__close-btn:after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  @media (max-width: 830px) {
+  .info {
+    width: 470px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 235px); }
+    .info__close-btn {
+      top: 15px;
+      right: 15px;
+      width: 22px;
+      height: 22px; }
+    .info__close-btn:before, .info__close-btn:after {
+      top: 10px;
+      left: 0;
+      background: #979797;
+      width: 18px; } }
+  @media (max-width: 500px) {
+  .info {
+    width: 90vw;
+    top: calc(50% - 115px);
+    left: calc(50% - 90vw * .5); } }
 

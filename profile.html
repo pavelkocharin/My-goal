@@ -102,9 +102,12 @@
             СМЕНИТЬ ПАРОЛЬ
           </h2>
           <form action="#" class="profile-item__form profile-item__form-password" id="change-password" name="change-password" method="POST">
-            <input class="profile-item__form-input" type="email" name="usermail" required placeholder="E-mail" autocomplete="on">
-            <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль" autocomplete="off">
-            <input class="profile-item__form-input" type="password" name="password" required placeholder="Новый пароль ещё раз" autocomplete="off">
+            <input class="profile-item__form-input" type="email" name="usermail"  placeholder="E-mail" autocomplete="on">
+            <input class="profile-item__form-input" type="password" name="password"  placeholder="Новый пароль" autocomplete="off">
+            <input class="profile-item__form-input" type="password" name="password"  placeholder="Новый пароль ещё раз" autocomplete="off">
+            <p class="profile-item__error-text">
+              Заполните все поля
+            </p>
             <div class="profile-item__btn-block">
               <button class="profile-item__form-button--reset" type="reset" form="change-password">
               ОТМЕНА
@@ -189,57 +192,94 @@
     <div class="popup-layout">
       <div class="popup-layout__popup-menu"></div>
       <button class="popup-layout__popup-menu-close"></button>
-      <div class="popup-layout__registration-field">
+      <div class="popup-layout__registration-field" id="registration-modal">
         <div class="registration">
-          <button class="registration__close-btn"></button>
+          <button class="registration__close-btn close-modal"></button>
           <h1 class="registration__title">
             РЕГИСТРАЦИЯ
           </h1>
           <form class="registration__form" action="#" id="registration__form" name="registration__form" method="POST">
-            <input class="registration__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <input class="registration__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <input class="registration__input" type="password" name="password" required placeholder="Пароль ещё раз" autocomplete="off">
-            <a class="registration__button" href="wellcome.html">
+            <input class="registration__input reg-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off" id="reg-validate">
+            <input class="registration__input reg-validate" type="password" name="password"  placeholder="Пароль" autocomplete="off">
+            <input class="registration__input reg-validate" type="password" name="password"  placeholder="Пароль ещё раз" autocomplete="off">
+            <p class="registration__error">
+              Такой e-mail уже зарегистрирован
+            </p>
+            <p class="profile-item__error-text-validate reg-validate">
+              Заполните все поля
+            </p>
+            <button class="registration__button" type="submit" data-id="reg-validate">
               ПРОДОЛЖИТЬ
-            </a>
+            </button>
           </form>
         </div>
       </div>
-      <div class="popup-layout__login-field">
+
+      <div class="popup-layout__login-field" id="login-modal">
         <div class="login">
-          <button class="login__close-btn"></button>
+          <button class="login__close-btn close-modal"></button>
           <h1 class="login__title">
             ВХОД
           </h1>
           <form class="login__form" action="#" id="login__form" name="login__form" method="GET">
-            <input class="login__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <input class="login__input" type="password" name="password" required placeholder="Пароль" autocomplete="off">
-            <a class="login__button" href="goals.html">
+            <input class="login__input login-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off">
+            <input class="login__input login-validate" type="password" name="password"  placeholder="Пароль" autocomplete="off">
+            <p class="login__error">
+              Неверный e-mail или пароль
+            </p>
+            <p class="profile-item__error-text-validate login-validate">
+              Заполните все поля
+            </p>
+            <button class="login__button" type="submit" data-id="login-validate">
               ВОЙТИ
-            </a>
-            <button class="login__button-recovery" id="recovery-pass" type="button">
+            </button>
+            <button class="login__button-recovery open-modal" id="recovery-pass" data-id="recovery-modal" type="button">
               Забыли пароль?
             </button>
           </form>
         </div>
       </div>
-      <div class="popup-layout__recovery-field">
+
+      <div class="popup-layout__recovery-field" id="recovery-modal">
         <div class="recovery">
-          <button class="recovery__close-btn"></button>
+          <button class="recovery__close-btn close-modal"></button>
           <h1 class="recovery__title">
             ВОССТАНОВЛЕНИЕ <br> ПАРОЛЯ
           </h1>
           <form class="recovery__form" action="#" id="recovery__form" name="recovery__form" method="POST">
-            <input class="recovery__input" type="email" name="usermail" required placeholder="E-mail" autocomplete="off">
-            <button class="recovery__button" id="recovery-pass-form" type="submit">
+            <input class="recovery__input recovery-validate" type="email" name="usermail"  placeholder="E-mail" autocomplete="off">
+            <p class="recovery__error">
+              Такой e-mail не зарегистрирован
+            </p>
+            <p class="profile-item__error-text-validate recovery-validate">
+              Заполните все поля
+            </p>
+            <button class="recovery__button" id="recovery-pass-form" type="submit" data-id="recovery-validate">
               ДАЛЕЕ
             </button>
           </form>
         </div>
       </div>
-      <div class="popup-layout__message-pass-field">
+<!-- окно дополнительно свёрстано, на обработчник не поставлено (не было указаний), вызывает модальные окна регистрации и входа -->
+      <div class="popup-layout__info" id="info-modal">
+        <div class="info">
+          <button class="recovery__close-btn close-modal"></button>
+          <p class="main__goals-status-text">
+            Для участия необходимо 
+            <button class="main__goals-status-link main__goals-status-link-reg open-modal" type="button" data-id="registration-modal">
+              зарегистрироваться
+            </button>
+            (или выполнить
+            <button class="main__goals-status-link main__goals-status-link--login open-modal" type="button" data-id="login-modal">
+              вход
+            </button>) и иметь положительный баланс.
+          </p>
+        </div>
+      </div>
+<!-- окно свёрстано, на обрабтчик не поставлено - от кнопки далее Окна Восстановления пароля после валидации -->
+      <div class="popup-layout__message-pass-field" id="message-pass-modal">
         <div class="new-pass">
-          <button class="new-pass__close-btn"></button>
+          <button class="new-pass__close-btn close-modal"></button>
           <p class="new-pass__text">
             На ваш электронный адрес отправлен новый пароль
           </p>
@@ -248,9 +288,10 @@
           </a>
         </div>
       </div>
-      <div class="popup-layout__success-field">
+<!-- окно свёрстано, указание было только сверстать без обработчика -->
+      <div class="popup-layout__success-field" id="success-modal">
         <div class="success">
-          <button class="success__close-btn"></button>
+          <button class="success__close-btn close-modal"></button>
           <h1 class="success__title">
             ПОЗДРАВЛЯЕМ!
           </h1>
@@ -262,9 +303,10 @@
           </button>
         </div>
       </div>
-      <div class="popup-layout__saved">
+
+      <div class="popup-layout__saved" id="saved-modal">
         <div class="saved">
-          <button class="saved__close-btn" type="button"></button>
+          <button class="saved__close-btn close-modal" type="button"></button>
           <p class="saved__text">
             Данные сохранены
           </p>
@@ -273,6 +315,8 @@
           </button>
         </div>
       </div>
+
+
     </div>
-  <script type="text/javascript" src="././js/app.js"></script><script type="text/javascript" src="././js/check-day.js"></script><script type="text/javascript" src="././js/fogot-pass.js"></script><script type="text/javascript" src="././js/login.js"></script><script type="text/javascript" src="././js/mobile-menu.js"></script><script type="text/javascript" src="././js/modal-saved.js"></script><script type="text/javascript" src="././js/range.js"></script><script type="text/javascript" src="././js/registration.js"></script><script type="text/javascript" src="././js/toggle-day.js"></script></body>
+  <script type="text/javascript" src="././js/app.js"></script><script type="text/javascript" src="././js/check-day.js"></script><script type="text/javascript" src="././js/mobile-menu.js"></script><script type="text/javascript" src="././js/modal-saved.js"></script><script type="text/javascript" src="././js/range.js"></script><script type="text/javascript" src="././js/registration.js"></script><script type="text/javascript" src="././js/toggle-day.js"></script></body>
 </html>
