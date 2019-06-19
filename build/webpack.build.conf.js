@@ -29,12 +29,11 @@ module.exports = {
   entry: {
     app: PATHS.src,
     'check-day': './src/js/check-day',
-    'fogot-pass':'./src/js/fogot-pass',
-    login: './src/js/login',
     'mobile-menu': './src/js/mobile-menu',
-    'modal-saved': './src/js/modal-saved',
+    'modal': './src/js/modal',
+    'profile': './src/js/profile',
     range: './src/js/range',
-    registration: './src/js/registration',
+    validation: './src/js/validation',
     'toggle-day': './src/js/toggle-day'
   },
   output: {
@@ -66,8 +65,8 @@ module.exports = {
           options: { sourceMap: true }
         }, {
           loader: 'postcss-loader',
-          options: { 
-            sourceMap: true, 
+          options: {
+            sourceMap: true,
             config: { path: `${PATHS.src}../postcss.config.js` },
             //отключение минификации полностью css файлов (и автопрефиксера)
             //minifySelectors: false,

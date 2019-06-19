@@ -11,7 +11,7 @@
     var firstCheckDay = function(){
       Array.prototype.forEach.call(tableColumn, function (elem) {
         var tableCheckboxes = elem.querySelectorAll(checkboxClass);
-        
+
         Array.prototype.forEach.call(tableCheckboxes, function (el) {
           if (el.hasAttribute('checked')) {
             elem.classList.add(tableSuccess);
@@ -19,7 +19,7 @@
             elem.classList.remove(tableSuccess);
           };
         });
-      });  
+      });
     };
 
     //выставление в результатах количества выполненных целей (не знаю нужна ли или на сервере, на всякий)
@@ -37,7 +37,7 @@
           element.innerHTML = daySuccess;
         });
       });
-    };   
+    };
 
     //запуск первого мониторинга
     firstCheckDay();
@@ -59,6 +59,6 @@
           checkGoalsSuccess();
         });
       });
-    }); 
+    });
   };
 })();
