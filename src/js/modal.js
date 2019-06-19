@@ -89,6 +89,7 @@
 
   function openModal(id) {
     var modal = getModalById(id);
+    closeAllModals();
 
     overlay.classList.add(overlayActiveClass);
     modal.classList.add(modalActiveClass);
